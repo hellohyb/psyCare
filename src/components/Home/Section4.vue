@@ -10,10 +10,13 @@
                     backgroundPosition: 'center center',
                     height: `${textHeight}px`
                 }" 
+                 @click="startTyping" 
                 class="w-[330px] md:w-[470px] relative top-0 left-10 md:top-20 md:left-30 z-18 object-cover
                         flex items-center justify-center font-bold
                         text-[#666666]
-                        transition-all duration-300"
+                        transition-all duration-300
+                        cursor-pointer
+                        "
                 >
                     <!-- visitort提问气泡内容 -->
                      <div class="text-content !px-10 text-xs md:text-sm leading-4" ref="textRef">
@@ -122,7 +125,6 @@
   const texts = [
     t('visitor_ask1'),
     t('visitor_ask2'),
-    t('visitor_ask3')
   ];
   const textHeight = ref(330);
   const visitorTop = ref(50);
@@ -152,15 +154,27 @@
       visitorTop.value = 50 + (textHeight.value - 330) * 0.3;
       visitorDescTop.value = 550 + (textHeight.value - 330) * 0.3;
     }
+    isTyping.value = false;
+    step.value++;
   };
-
+  const step = ref(1)
   const startTyping = async () => {
-    if (isTyping.value) return;
-    isTyping.value = true;
-    
-    while (currentTextIndex.value < texts.length - 1 && isTyping.value) {
-      currentTextIndex.value++;
-      await typeText(texts.slice(0, currentTextIndex.value + 1).join('\n\n'));
+    console.log(step.value)
+    if (step.value == 2){
+      texts.push(t('visitor_ask3'))
+      isTyping.value = true;
+      while (currentTextIndex.value < texts.length - 1 && isTyping.value) {
+        currentTextIndex.value++;
+        await typeText(texts.slice(0, currentTextIndex.value + 1).join('\n\n'));
+      }
+    }else if(step.value == 1){
+      isTyping.value = true;
+      while (currentTextIndex.value < texts.length - 1 && isTyping.value) {
+        currentTextIndex.value++;
+        await typeText(texts.slice(0, currentTextIndex.value + 1).join('\n\n'));
+      }
+    }else{
+      return;
     }
   };
 

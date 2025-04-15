@@ -25,28 +25,28 @@
                 <ul class="flex flex-col gap-y-4 justify-center md:items-start items-center">
                     <li>
                         <div class="top flex items-center md:justify-start justify-center gap-x-2">
-                            <img :src="tel" alt="tel">
+                            <Tel/>
                             <span>{{ t('tel') }}</span>
                         </div>
                         <span class="text-[#666666]">{{ t('tel_desc') }}</span>
                     </li>
                     <li>
                         <div class="top flex items-center md:justify-start justify-center gap-x-2">
-                            <img :src="email" alt="email">
+                            <Email/>
                             <span>{{ t('email') }}</span>
                         </div>
                         <span class="text-[#666666]">{{ t('email_desc') }}</span>
                     </li>
                     <li>
                         <div class="top flex items-center md:justify-start justify-center gap-x-2">
-                            <img :src="media" alt="media">
+                            <Media/>
                             <span>{{ t('media') }}</span>
                         </div>
                         <span class="text-[#666666]">{{ t('media_desc') }}</span>
                     </li>
                     <li>
                         <div class="top flex items-center md:justify-start justify-center gap-x-2">
-                            <img :src="office" alt="office">
+                            <Office/>
                             <span>{{ t('office') }}</span>
                         </div>
                         <span class="text-[#666666]">{{ t('office_address') }}</span>
@@ -73,12 +73,10 @@
   
   <script setup>
   import logoWhite from '../../assets/Home/footer/logo-white.png';
-  import tel from '../../assets/Home/footer/tel.png';
-  import email from '../../assets/Home/footer/email.png';
-  import media from '../../assets/Home/footer/media.png';
-  import office from '../../assets/Home/footer/office.png';
-  import pcBg from '../../assets/Home/footer/section_bg.png';
-  import mobileBg from '../../assets/Home/footer/mobile-bg.png';
+  import Tel from '../icon/footer/Phone.vue';
+  import Email from '../icon/footer/Email.vue';
+  import Media from '../icon/footer/Media.vue';
+  import Office from '../icon/footer/Office.vue';
   import { useI18n } from 'vue-i18n';
   import { computed } from 'vue';
   const { t,locale } = useI18n()

@@ -12,7 +12,7 @@
                    </div>
                    <div class="right flex-1 flex flex-col gap-2">
                     <h1 class="text-2xl font-bold">{{ t('section6_title1') }}</h1>
-                    <p class="text-sm font-bold leading-6">{{ t('section6_desc1') }}</p>
+                    <p class="text-sm font-bold leading-7">{{ t('section6_desc1') }}</p>
                     <div class="author flex items-center gap-2">
                         <img :src="ceo_bg" alt="ceo" class="object-cover">
                         <div class="author-info">
@@ -23,11 +23,10 @@
                    </div>
                 </div>
                 <div class="item2 flex gap-4">
-                    
                     <img :src="news_bg" alt="home" class="w-10 h-10">
                     <div class="right flex-1 flex flex-col gap-2">
                     <h1 class="text-2xl font-bold">{{ t('section6_title2') }}</h1>
-                    <p class="text-sm font-bold leading-6">{{ t('section6_desc2') }}</p>
+                    <p class="text-sm font-bold leading-7">{{ t('section6_desc2') }}</p>
                     <p class="text-sm">{{ t('section6_news') }}</p>
                     <p class="text-sm text-[#666666]">{{ t('section6_news_desc') }}</p>
                    </div>

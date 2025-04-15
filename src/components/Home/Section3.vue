@@ -5,14 +5,14 @@
             <img :src="right" alt="right">
         </div>
         <div class="desc w-full !p-10 gap-x-10 grid rounded-md grid-cols-1 bg-[#F7F8F2] md:grid-cols-2">
-            <div class="consultant flex flex-col justify-center items-center">
+            <div class="consultant flex flex-col justify-start items-center">
                 <h1  class="text-2xl font-bold !mb-10">{{ t('consultant') }}</h1>
                 <div class="item-list flex flex-col justify-start items-start gap-10">
                     <div class="flex justify-start gap-x-2" v-for="(item, index) in itemList" :key="index">
-                        <div class="img">
+                        <div class="img w-20 h-20">
                             <img :src="item.img" alt="">
                         </div>
-                        <div class="desc flex flex-col gap-y-1">
+                        <div class="desc flex-1 flex flex-col gap-y-1">
                             <h1 class="font-bold">{{ item.title }}</h1>
                             <span class="text-sm">{{ item.desc1 }}</span>
                             <li class="text-sm">{{ item.desc2 }}</li>
@@ -20,14 +20,14 @@
                     </div>
                 </div>
             </div>
-            <div class="visitor !mt-10 flex flex-col justify-center items-center">
+            <div class="visitor !mt-10 md:!mt-0 flex flex-col justify-start items-center">
                 <h1  class="text-2xl font-bold !mb-10">{{ t('visitor') }}</h1>
                 <div class="item-list flex flex-col justify-start items-start gap-10">
                     <div class="flex justify-start gap-x-2" v-for="(item, index) in visitorList" :key="index">
-                        <div class="img">
+                        <div class="img w-20 h-20">
                             <img :src="item.img" alt="">
                         </div>
-                        <div class="desc flex flex-col gap-y-1">
+                        <div class="desc flex-1 flex flex-col gap-y-1">
                             <h1 class="font-bold">{{ item.title }}</h1>
                             <li class="text-sm" v-for="(cItem,cIndex) in item.desc">{{ cItem }}</li>
                         </div>

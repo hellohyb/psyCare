@@ -1,5 +1,5 @@
 <template>
-  <div class="home-container !px-0 md:!px-4 w-full flex flex-col justify-start items-center">
+  <div class="home-container !px-0 w-full flex flex-col justify-start items-center">
      <TopSection />
      <Section2 />
      <Section3 />

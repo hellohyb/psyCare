@@ -7,7 +7,10 @@
         
         >
             <div class="left flex items-center px-20 justify-between w-full">
-                <div class="logo" style="margin-right: 10px;margin-left: 10px;"><img :src="Logo" class="object-cover h-12 md:h-full" alt=""></div>
+                <div class="logo" style="margin-right: 10px;margin-left: 10px;">
+                    <!-- <img :src="Logo" class="object-cover h-12 md:h-full" alt=""> -->
+                    <Logo/>
+                </div>
                 <!-- 桌面端菜单 -->
                 <div class="menu-list  hidden md:flex items-center justify-around flex-1 h-[60%]">
                     <li v-for="(item, index) in navList" :key="`menu-${index}`"
@@ -19,11 +22,11 @@
                     </li>
                    <div class="right-btn h-12 w-70 flex justify-between gap-x-2">
                         <button class="btn-1 w-full flex justify-center items-center bg-white rounded-md cursor-pointer hover:bg-yellow-50">
-                            <img :src="viewer" alt="">
+                            <Viewer/>
                             <span>{{ t('visitor') }}</span>
                         </button>
                         <button class="btn-2 w-full h-full px-30 py-5 flex justify-center items-center  cursor-pointer text-white bg-teal-600 rounded-md hover:bg-teal-800">
-                            <img :src="asker" alt="">
+                            <Asker/>
                             <span>{{ t('consultant') }}</span>
                         </button>
                    </div>
@@ -72,11 +75,11 @@
 </template>
 
 <script setup>
-import Logo from '../assets/Header/logo.png'
+import Logo from './icon/Logo.vue'
 import { ref, computed } from 'vue'
 import { useI18n } from 'vue-i18n'
-import asker from '../assets/Header/asker.png'
-import viewer from '../assets/Header/viewer.png'
+import Asker from './icon/Asker.vue'
+import Viewer from './icon/Viewer.vue'
 const { t, locale } = useI18n()
 const currentMenuId = ref(1)
 const isMobileMenuOpen = ref(false)
