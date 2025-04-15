@@ -62,11 +62,11 @@
             </div>
             <div class="right-btn h-10 w-full flex justify-between gap-x-10 px-4">
                     <button class="btn-1 w-full flex justify-center items-center bg-white rounded-md text-white">
-                        <img :src="viewer" alt="">
+                        <Viewer/>
                         <span class="text-black">{{ t('visitor') }}</span>
                     </button>
                     <button class="btn-2 w-full h-full px-10 py-5 flex justify-center items-center bg-[#005843] rounded-md text-white">
-                        <img :src="asker" alt="">
+                        <Asker/>
                         <span>{{ t('consultant') }}</span>
                     </button>
                 </div>
