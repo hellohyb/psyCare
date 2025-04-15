@@ -1,0 +1,107 @@
+{
+    "home": "首页",
+    "service": "服务",
+    "product": "产品",
+    "influence": "影响",
+    "contactUs": "联系我们",
+    "visitor": "来访者",
+    "language": "语言",
+    "consultant": "咨询师",
+    "section1":"PsyCare守护您的心理健康",
+    "section2":"我们专注于为诊疗师提供AI智能助手，提升服务效率，助力心理健康管理",
+    "btn1_text":"我们的产品",
+    "section2_title":"守护身心健康，共创快乐世界！",
+    "section2_item1_title":"AI精准分析",
+    "section2_item1_desc":"基于AI的深度学习算法，实时分析患者数据，打造个性化标签，提供专属的诊疗建议，助力医生决策。",
+    "section2_item2_title":"诊疗师专属AI助手",
+    "section2_item2_desc":"智能诊疗助手提升诊疗师的工作效率，减轻重复性任务，让医生专注于患者关怀。",
+    "section2_item3_title":"高效AI沟通",
+    "section2_item3_desc":"智能对话与患者反馈整合，提升服务体验。通过NLP自然语言处理技术，实时分析患者对话，帮助医生快速洞察心理状态。",
+
+
+    "section3_item1_title":"预约管理",
+    "section3_item1_des1":"高效管理预约，轻松掌控时间！",
+    "section3_item1_des2":"提供便捷的预约管理功能，诊疗师可查看、确认、取消或调整患者的预约，确保咨询流程顺畅，同时提升时间管理和服务效率。",
+
+    "section3_item2_title":"高效记录问诊内容",
+    "section3_item2_des1":"智能记录，让问诊如呼吸般轻松！",
+    "section3_item2_des2":"问诊期间，诊疗师可轻松点开患者知识图谱，查看患者数据信息以及背景，并且任意编辑修改诊断和治疗方案以及SOAP笔记。",
+
+    "section3_item3_title":"数据一体化",
+    "section3_item3_des1":"数据赋能，让诊疗更高效！",
+    "section3_item3_des2":"咨询结束后，可点击上传数字化文件、录音等资料，为患者下一次咨询提供便捷，同时为诊疗师提供更加精准和高效的服务。",
+
+
+    "section3_item4_title":"成长与影响力系统",
+    "section3_item4_des1":"助力成长，提升专业影响力！",
+    "section3_item4_des2":"通过清晰的成长系统，诊疗师可以直观了解自身的成长轨迹，提升服务质量，同时获得平台的持续支持与激励。",
+
+
+    "section3_item5_title":"AI 聊天助手",
+    "section3_item5_des1":"分享日常生活与各种情绪变换，让AI成为你的好朋友！",
+    "section3_item5_des2":"",
+
+    "section3_item6_title":"高效心理咨询",
+    "section3_item6_des1":"不拘泥于传统形式，让聊天无缝连接！",
+    "section3_item6_des2":"通过清晰的成长系统，诊疗师可以直观了解自身的成长轨迹，提升服务质量，同时获得平台的持续支持与激励。",
+
+    "section3_item7_title":"成长与影响力系统",
+    "section3_item7_des1":"助力成长，提升专业影响力！",
+    "section3_item7_des2":"线上咨询： 线上预约，等待咨询师的视频邀请；",
+    "section3_item7_des3":"线下咨询：平台上预约，线下面谈；",
+    "section3_item7_des4":"无预约： 找到咨询师，咨询师手动输入/扫码开启无预约咨询流程；",
+    "section3_item7_des5":"未注册用户：找到咨询师，咨询师开启来宾访客的咨询流程；",
+
+    "section4_title":"具体案例",
+    "visitor_name":"求助人小美（化名）",
+    "consultant_name":"张磊咨询师",
+    "visitor_desc":"“在朋友推荐PsyCare平台之前，我一直没有找到一个既合适又专业的平台，能够有效地帮助我缓解焦虑和抑郁情绪，成为我日常生活中的依赖，像朋友一样倾诉我的工作和生活。PsyCare给了我极大的帮助，我能更清楚地了解我的心理状态，也能在治疗过程中获得个性化的建议，真的改变了我的生活质量。”",
+    "consultant_desc":"“作为PsyCare平台的核心成员之一，我深知心理治疗不仅仅依赖于传统面谈，还需要借助先进的技术来提升治疗效果。通过平台提供的智能助手，我可以高效地分析患者的数据，全面了解他们的症状和背景，从而为每位患者制定个性化的治疗方案。PsyCare极大地提升了治疗的效率与准确性，使我能够更好地跟踪患者的进展，及时调整治疗策略，确保每个患者得到最合适的帮助。“",
+    "consultant_ask":"我是张磊咨询师，从事心理咨询行业十余年了。感谢小美积极的配合治疗，在我使用认知行为疗法（CBT）后，她的焦虑和抑郁情绪得到了有效缓解。看到她逐渐恢复，我感到非常欣慰，也很高兴看到她在治疗中的积极变化。",
+    "visitor_ask1":"我是小美，三年前被诊断出重度抑郁和焦虑。 每天都觉得很难熬，情绪低落、失眠，什么都提不起兴趣。我真的不知道该怎么办，做什么都开心不起来，生活好像也没什么意义。",
+    "visitor_ask2":"然后我认识了PsyCare！我先和AI聊天助手聊了一周，感觉很不错。后来我鼓起勇气，预约了张医生的线上问诊。张医生特别专业，也很耐心，整个过程让我觉得很舒服，没有一点不适。再后来，我决定去线下见张医生……",
+    "visitor_ask3":"几次咨询下来，我的头痛、头晕等症状缓解了不少，睡眠也变好了。现在感觉就像石缝里透出一线阳光，心里终于有了点希望。",
+
+    "section5_title":"我们的影响",
+    "section5_desc":"加入我们，改变心理健康的未来",
+
+    "swiper_item1":"1000+ 心理咨询",
+    "swiper_item2":"90+ 问诊效率提升",
+    "swiper_item3":"95%+ 诊疗师反馈满意度",
+    "swiper_item4":"50+ 合作机构",
+    "swiper_item5":"50%+ 收入增长",
+
+
+    "about_title":"关于我们",
+    "section6_title1":"公司信息",
+    "section6_desc1":"PsyCare是一家专注于心理健康科技创新的公司。我们的愿景是通过AI技术赋能诊疗师和治疗机构，使心理健康服务更加普及且高效。我们正在与全球多个心理健康机构合作，推动行业向智能化、个性化方向发展。",
+    "section6_author":"胡金华",
+    "section6_author_desc":"CEO & 创始人",
+
+    "section6_title2":"公司信息",
+    "section6_desc2":"PsyCare正处于快速增长阶段，致力于通过人工智能技术为心理健康诊疗领域带来革命性变革。我们刚刚完成了一轮融资，并计划在未来几个月内推出全新的AI助手，为心理治疗师提供更智能的临床支持。我们的目标是让每个需要帮助的人都能通过创新的技术获得更好的心理健康服务。",
+    "section6_news":"最新动态: ",
+    "section6_news_desc":"我们将在下个月参加全球最大的心理健康技术大会，并展示我们最新的AI产品。敬请期待我们的未来发布。",
+
+    "section7_title":"准备好联系我们了吗？",
+    "tel":"电话",
+    "email":"邮箱",
+    "media":"社交媒体",
+    "office":"办公室",
+    "office_desc":"此办公室为轮椅使用者和残疾人提供无障碍通行环境。",
+
+    "tel_desc":"(123) 456-7890",
+    "email_desc":"support{'@'}psycare.ai",
+    "media_desc":"{'@'}PsyCare",
+    "office_address":"123 Anywhere St. / Any City ST 12345",
+
+    "footer_product":"产品",
+    "footer_product_item1":"首页",
+    "footer_product_item2":"服务",
+    "footer_product_item3":"产品",
+    "footer_product_item4":"影响",
+    "footer_about":"公司",
+    "footer_about_item1":"关于我们",
+    "footer_about_item2":"联系我们",
+    "footer_contact":"关注我们"
+}
