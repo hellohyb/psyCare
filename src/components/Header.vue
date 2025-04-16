@@ -21,7 +21,7 @@
                         <a :href="`#${item.desc}`">{{ item.name }}</a>
                     </li>
                    <div class="right-btn h-12 w-70 flex justify-between gap-x-2">
-                        <button class="btn-1 w-full flex justify-center items-center bg-white rounded-md cursor-pointer hover:bg-yellow-50">
+                        <button class="btn-1 w-full flex justify-center items-center !shadow-orange-50 rounded-md cursor-pointer hover:bg-yellow-50">
                             <Viewer/>
                             <span>{{ t('visitor') }}</span>
                         </button>

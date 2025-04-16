@@ -11,7 +11,7 @@
                     height: `${textHeight}px`
                 }" 
                  @click="startTyping" 
-                class="w-[330px] md:w-[470px] relative top-0 left-10 md:top-20 md:left-30 z-18 object-cover
+                class="w-[330px] md:w-[500px] md:!px-2 relative top-0 left-10 md:top-20 md:left-30 z-18 object-cover
                         flex items-center justify-center font-bold
                         text-[#666666]
                         transition-all duration-300
