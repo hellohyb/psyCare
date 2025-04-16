@@ -8,7 +8,7 @@
                         <img :src="item.img" alt="" />
                     </div>
                     <div class="description">
-                        <h2>{{ item.title }}</h2>
+                        <h2 class="font-bold ">{{ item.title }}</h2>
                         <p>{{ item.desc }}</p>
                     </div>
                 </div>

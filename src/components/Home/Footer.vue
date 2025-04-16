@@ -2,7 +2,8 @@
     <div class="top-section1 md:!pt-10 h-auto bg-[#f6f7f0] !px-10 md:h-150 md:!my-20 !mb-0 flex flex-col items-center justify-start w-full md:translate-y-40">
        <div class="container flex-col md:flex-row h-full md:max-w-[1100px] flex items-center md:items-start !pt-20 justify-center md:justify-between">
             <div class="logo">
-                <img :src="logoWhite" alt="logo">
+                <!-- <img :src="logoWhite" alt="logo"> -->
+                 <Logo/>
             </div>
             <div class="product">
                 <h1 class="text-2xl font-bold !my-4">{{ t('footer_product') }}</h1>
@@ -74,6 +75,7 @@
   <script setup>
   import logoWhite from '../../assets/Home/footer/logo-white.png';
   import Tel from '../icon/footer/Phone.vue';
+  import Logo from '../icon/footer/Logo.vue';
   import Email from '../icon/footer/Email.vue';
   import Media from '../icon/footer/Media.vue';
   import Office from '../icon/footer/Office.vue';

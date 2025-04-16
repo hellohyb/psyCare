@@ -1,7 +1,7 @@
 <template>
   <div id="homePage"
-   class="top-section mobile md:pc flex justify-center items-center w-full h-[900px] md:h-[1300px]">
-    <div class="!px-10 w-full flex flex-col justify-center items-center md:w-[1100px]">
+   class="top-section mobile md:pc flex justify-center items-center w-full h-[900px] md:h-[1100px]">
+    <div class="!px-10 w-full flex flex-col justify-center items-center md:w-[1100px] -translate-y-20">
       <h1 class="text-4xl font-bold">{{ t('section1') }}</h1>
       <div class="description">{{ t('section2') }}</div>
       <button class="!px-6 !py-4 text-white rounded-md bg-teal-600 cursor-pointer hover:bg-teal-800">{{ t('btn1_text') }}</button>

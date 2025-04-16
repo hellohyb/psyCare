@@ -25,7 +25,7 @@
                     :effect="'creative'"
                     :direction="'vertical'"
                     :autoplay="{
-                        delay: 5000,
+                        delay: 3000,
                         disableOnInteraction: false,
                     }"
                     :creative-effect="{

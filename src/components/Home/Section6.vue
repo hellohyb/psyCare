@@ -16,8 +16,8 @@
                     <div class="author flex items-center gap-2">
                         <img :src="ceo_bg" alt="ceo" class="object-cover">
                         <div class="author-info">
-                            <h1>{{ t('section6_author') }}</h1>
-                            <p>{{ t('section6_author_desc') }}</p>
+                            <h1 class="text-sm text-[#666666]">{{ t('section6_author') }}</h1>
+                            <p class="text-sm text-[#666666]">{{ t('section6_author_desc') }}</p>
                         </div>
                     </div>
                    </div>
