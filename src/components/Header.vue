@@ -1,6 +1,6 @@
 <template>
-    <div class="header flex justify-center items-center flex-col w-full py-40 !mt-4 md:h-20"
-        :class="{'h-auto': isMobileMenuOpen}"
+    <div class="header flex justify-center items-center flex-col w-full py-40 !mt-4 md:!mt-0 md:h-20"
+        :class="{'h-auto': isMobileMenuOpen, 'header-scrolled': isScrolled}"
     >
         <div class="header-main w-[90%] rounded-4xl bg-white/10 backdrop-blur-md px-4 flex justify-between md:max-w-[1100px] md:rounded-none md:bg-transparent md:backdrop-blur-none"
         :class="{'rounded-b-none': isMobileMenuOpen}"
@@ -76,13 +76,27 @@
 
 <script setup>
 import Logo from './icon/Logo.vue'
-import { ref, computed } from 'vue'
+import { ref, computed, onMounted, onUnmounted } from 'vue'
 import { useI18n } from 'vue-i18n'
 import Asker from './icon/Asker.vue'
 import Viewer from './icon/Viewer.vue'
 const { t, locale } = useI18n()
 const currentMenuId = ref(1)
 const isMobileMenuOpen = ref(false)
+const isScrolled = ref(false)
+
+// 监听滚动事件
+const handleScroll = () => {
+    isScrolled.value = window.scrollY > 50 // 滚动超过50px时添加背景
+}
+
+onMounted(() => {
+    window.addEventListener('scroll', handleScroll)
+})
+
+onUnmounted(() => {
+    window.removeEventListener('scroll', handleScroll)
+})
 
 const navList = computed(() => [
     {
@@ -130,7 +144,21 @@ const toggleMobileMenu = () => {
     left: 0;
     user-select: none;
     z-index: 999;
+    transition: background-color 0.3s ease;
 }
+@media screen and (max-width: 768px) {
+    .header-scrolled {
+    background-color: transparent;
+    box-shadow: none;
+}
+}
+@media screen and (min-width: 768px)  {
+    .header-scrolled {
+    background-color: white;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    }
+}
+
 /* 
 @media (max-width: 768px) {
     .header {

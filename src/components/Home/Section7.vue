@@ -28,7 +28,7 @@
                         <span class="font-bold">123 Anywhere St. / Any City ST 12345</span>
                         <span class="text-[#666666]">{{ t('office_desc') }}</span>
                     </div>
-                    <button @click="handleBookConsultation" class="bg-[#005843] w-1/2 text-white font-bold !py-4 !px-4 rounded-lg cursor-pointer hover:bg-[#005843]/80 transition-all">
+                    <button @click="handleBookConsultation" class="bg-[#005843] w-1/2 uppercase underline text-sm text-white font-bold !py-4 !px-4 rounded-lg cursor-pointer hover:bg-[#005843]/80 transition-all">
                         book a consultation
                     </button>
                 </div>
