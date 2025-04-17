@@ -25,7 +25,7 @@
                     :effect="'creative'"
                     :direction="'vertical'"
                     :autoplay="{
-                        delay: 3000,
+                        delay: 2000,
                         disableOnInteraction: false,
                     }"
                     :creative-effect="{
@@ -39,11 +39,11 @@
                     }"
                     @swiper="onSwiper"
                     @slideChange="onSlideChange"
-                    class="w-full !rounded-lg !overflow-hidden"
+                    class="w-full h-full !rounded-lg !overflow-hidden"
                 >
                   
                       <SwiperSlide v-for="item in swiperList" :key="item.id" style="overflow: hidden;" class="!rounded-lg">
-                          <img :src="item.imgPC" :alt="item.title" class="w-full object-cover rounded-lg" />
+                          <img :src="item.imgPC" :alt="item.title" class="w-full h-full object-cover rounded-lg" />
                       </SwiperSlide>
                     
                     

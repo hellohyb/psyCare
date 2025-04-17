@@ -4,6 +4,11 @@
   margin: 0;
   box-sizing: border-box;
   scroll-behavior: smooth;
+  touch-action: auto;
+}
+body {
+  -webkit-overflow-scrolling: touch; /* 添加这个属性支持 iOS 滚动 */
+  touch-action: pan-y; /* 允许垂直滚动 */
 }
 :root {
   --primary-color: #005843; 

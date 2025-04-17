@@ -1,17 +1,17 @@
 <template>
-    <div class="top-section h-340 md:h-190 !my-20 flex flex-col items-center justify-start w-full md:max-w-[1100px]">
-       <h1 class="text-2xl font-bold">{{ t('section4_title') }}</h1>
+    <div ref="sectionRef" class="top-section h-340 md:h-190 !my-20 flex flex-col items-center justify-start w-full md:max-w-[1100px] pt-20 md:pt-24">
+       <h1 class="text-2xl font-bold fade-in">{{ t('section4_title') }}</h1>
        <div class="grid grid-cols-1 h-full md:w-full gap-10 md:grid-cols-2">
-            <div class="visitor relative">
+            <div class="visitor relative fade-in">
                 <!-- visitort提问气泡 -->
                 <div :style="{
                     background: `url(${askContent}) no-repeat`,
                     backgroundSize: '100% 100%',
                     backgroundPosition: 'center center',
-                    height: `${textHeight}px`
+                    height: `420px`
                 }" 
                  @click="startTyping" 
-                class="w-[330px] md:w-[500px] md:!px-2 relative top-0 left-10 md:top-20 md:left-30 z-18 object-cover
+                class="w-[330px] md:w-[500px] md:!px-2 relative top-10 left-10 md:top-20 md:left-30 z-18 object-cover
                         flex items-center justify-center font-bold
                         text-[#666666]
                         transition-all duration-300
@@ -25,14 +25,13 @@
                      <!-- visitort提问表情 -->
                      <img :src="currentEmoji" 
                         alt="emotion" 
-                        :style="{ bottom: `${iconOffsetBottom}px` }"
-                        class="absolute right-40 z-19 object-cover transition-all duration-300" 
+                        class="absolute top-84 right-30 md:right-60 md:top-72 z-19 object-cover transition-all duration-300" 
                      />
                      <img :src="pointer" 
                         @click="startTyping" 
                         alt="pointer" 
-                        :style="{ bottom: `${iconOffsetBottom}px` }"
-                        class="absolute left-40 z-19 w-[100px] h-auto md:w-[90px] object-cover transition-all duration-300" 
+                          v-if="step < 3"
+                        class="absolute left-10 top-67 md:top-70 md:left-20 z-19 w-[100px] h-auto md:w-[90px] object-cover transition-all duration-300" 
                      />
                 </div>
                 <!-- visitort-->
@@ -41,17 +40,16 @@
                  class="absolute -left-10 md:top-100 md:left-2 z-19 w-[100px] h-auto md:w-[130px] object-cover" />
                 <!-- visitort名字气泡-->
                 <div :style="{background: `url(${nameContent}) center center no-repeat`}" 
-                class="w-[200px] h-[50px] absolute left-16 md:top-130 md:left-20 z-20 object-cover
+                class="w-[200px] h-[50px] absolute left-6 top-130 md:top-130 md:left-20 z-20 object-cover
                         flex items-center justify-center font-bold
                         text-xs
                         "
-                :class="`top-[${visitorNameTop}px]`"
                 >
                      {{ t('visitor_name') }}
                 </div>
                 <!-- visitort描述气泡-->
-                <div :style="{top: `${visitorDescTop}px`,background: `url(${descContent}) center center no-repeat`,backgroundSize: '100% 100%', backgroundPosition: 'center center'}" 
-                class="w-[390px] h-[190px] md:w-[500px] md:h-[200px] absolute md:top-140 -left-10 md:left-0 z-18 object-cover
+                <div :style="{background: `url(${descContent}) center center no-repeat`,backgroundSize: '100% 100%', backgroundPosition: 'center center'}" 
+                class="w-[390px] h-[190px] md:w-[500px] md:h-[200px] absolute top-140 md:top-140 -left-10 md:left-0 z-18 object-cover
                         flex items-center justify-center md:font-bold
                         text-[#666666]
                         "
@@ -62,7 +60,7 @@
                      </div>
                 </div>
             </div>
-            <div class="consultant relative">
+            <div class="consultant relative fade-in">
                 <!-- consultant-->
                 <img :src="consultant" alt="consultant" class="absolute top-60 -right-0 md:top-94 md:right-2 z-20 object-cover" />
                 <!-- consultant名字气泡-->
@@ -115,6 +113,8 @@
   import { ref, onMounted, computed } from 'vue';
   import askContent2 from '../../assets/Home/section4/ask-content2.png';
   const { t } = useI18n()
+
+  const sectionRef = ref(null)
 
   const displayText = ref(t('visitor_ask1'));
   const containerRef = ref(null);
@@ -190,6 +190,24 @@
         visitorDescTop.value = 550;
       }
     }
+
+    // 添加淡入动画观察器
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible')
+        }
+      })
+    }, {
+      threshold: 0.1
+    })
+
+    if (sectionRef.value) {
+      const elements = sectionRef.value.querySelectorAll('.fade-in')
+      elements.forEach(element => {
+        observer.observe(element)
+      })
+    }
   });
 
   // 添加图标底部偏移量计算
@@ -212,5 +230,16 @@
   .relative {
     position: relative;
     transition: all 0.3s ease;
+  }
+
+  .fade-in {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+  }
+
+  .fade-in.visible {
+    opacity: 1;
+    transform: translateY(0);
   }
   </style>
