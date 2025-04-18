@@ -13,9 +13,7 @@
                 </div>
                 <!-- 桌面端菜单 -->
                 <div class="menu-list  hidden md:flex items-center justify-around flex-1 h-[60%]"
-                    :style="{'justify-content':(route.name === 'visitor' || route.name === 'consultant') ? 'start' : ''
-                            
-                    }"
+                   
                 >
                     <li v-for="(item, index) in navList" :key="`menu-${index}`"
                         class="menu-item list-none h-full flex justify-center items-center text-[#333333]"
@@ -23,19 +21,21 @@
                         :class="{'active':(item.id === currentMenuId),
                         
                         }"
-                        :style="{'margin-left':(route.name === 'visitor' || route.name === 'consultant') ? '40px' : '',
-                        'justify-content':(route.name === 'visitor' || route.name === 'consultant') ? 'center' : 'flex-start !important'
-
-                        }"
                     >
                         <a :href="`#${item.desc}`">{{ item.name }}</a>
                     </li>
-                   <div v-if="route.path !== '/visitor' && route.path !== '/consultant'" class="right-btn h-12 w-70 flex justify-between gap-x-2">
-                        <button @click="goToVisitor" class="btn-1 w-full flex justify-center bg-gray-100  items-center !shadow-orange-50 rounded-md cursor-pointer hover:bg-yellow-50">
+                   <div class="right-btn h-12 w-70 flex justify-between gap-x-2">
+                        <button v-if="route.path !== '/'" @click="goToPage('/')" class="btn-1 w-full flex justify-center bg-gray-100  items-center !shadow-orange-50 rounded-md cursor-pointer hover:bg-yellow-50">
+                            <HomeIcon/>
+                            <span>{{ t('home') }}</span>
+                        </button>
+                        <button v-if="route.path !== '/visitor'" @click="goToPage('/visitor')"
+                        :class="{'bg-teal-600 text-white  hover:bg-teal-800': route.path === '/consultant'}"
+                        class="btn-1 w-full flex justify-center bg-gray-100  items-center !shadow-orange-50 rounded-md cursor-pointer">
                             <Viewer/>
                             <span>{{ t('visitor') }}</span>
                         </button>
-                        <button @click="goToConsultant" class="btn-2 w-full h-full px-30 py-5 flex justify-center items-center  cursor-pointer text-white bg-teal-600 rounded-md hover:bg-teal-800">
+                        <button v-if="route.path !== '/consultant'" @click="goToPage('/consultant')" class="btn-2 w-full h-full px-30 py-5 flex justify-center items-center  cursor-pointer text-white bg-teal-600 rounded-md hover:bg-teal-800">
                             <Asker/>
                             <span>{{ t('consultant') }}</span>
                         </button>
@@ -71,11 +71,15 @@
                 
             </div>
             <div class="right-btn h-10 w-full flex justify-between gap-x-10 px-4">
-                    <button @click="goToVisitor" class="btn-1 w-full flex justify-center items-center bg-white rounded-md text-white">
+                    <button v-if="route.path !== '/'" @click="goToPage('/')" class="btn-1 w-full flex justify-center items-center bg-white rounded-md text-white">
+                        <HomHomeIcone/>
+                        <span class="text-black">{{ t('home') }}</span>
+                    </button>
+                    <button v-if="route.path !== '/visitor'" @click="goToPage('/visitor')" class="btn-1 w-full flex justify-center items-center bg-white rounded-md text-white">
                         <Viewer/>
                         <span class="text-black">{{ t('visitor') }}</span>
                     </button>
-                    <button @click="goToConsultant" class="btn-2 w-full h-full px-10 py-5 flex justify-center items-center bg-[#005843] rounded-md text-white">
+                    <button v-if="route.path !== '/consultant'" @click="goToPage('/consultant')" class="btn-2 w-full h-full px-10 py-5 flex justify-center items-center bg-[#005843] rounded-md text-white">
                         <Asker/>
                         <span>{{ t('consultant') }}</span>
                     </button>
@@ -91,6 +95,7 @@ import { useI18n } from 'vue-i18n'
 import { useRouter, useRoute } from 'vue-router'
 import Asker from './icon/Asker.vue'
 import Viewer from './icon/Viewer.vue'
+import HomeIcon from './icon/Home.vue'
 const { t, locale } = useI18n()
 const currentMenuId = ref(1)
 const isMobileMenuOpen = ref(false)
@@ -104,6 +109,9 @@ const goToVisitor = () => {
 const goToConsultant = () => {
     // 跳转至咨询师页面
     router.push('/consultant')
+}
+const goToPage = (page) => {
+    router.push(page)
 }
 // 监听滚动事件
 const handleScroll = () => {
@@ -121,7 +129,7 @@ onUnmounted(() => {
 const navList = computed(() => [
     {
         id: 1,
-        name: t('home'),
+        name:route.path === '/' ? t('home') : route.path === '/visitor' ? t('visitor') : t('consultant'),
         desc: 'homePage'
     }, {
         id: 2,

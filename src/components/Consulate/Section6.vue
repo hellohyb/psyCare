@@ -2,28 +2,28 @@
     <div ref="sectionRef" class="top-section !p-4 md:!p-10 !my-10 md:!my-20 bg-white flex flex-col items-center justify-start  w-full md:w-[1100px]">
        <h1 class="text-2xl font-bold !mb-4 fade-in">{{ t('c_section6_title') }}</h1>
        <h3 class="font-bold text-sm text-center !my-1 fade-in">{{ t('c_section6_title_desc1') }}</h3>
-        <div class="section6-item rounded-lg w-full md:w-[70%] bg-[#f7f8f2] md:-translate-x-20 !py-8 !px-4 !mt-10 flex justify-between items-center">
+        <div class="section6-item rounded-lg w-full md:w-[70%] bg-[#f7f8f2] md:-translate-x-20 !py-8 !px-4 !mt-10 flex justify-between items-center fade-in">
           <Section6Item1 />
           <div class="flex-1 flex flex-col items-start justify-center !ml-4">
             <h3 class="text-lg font-bold">{{ t('c_section6_item1_title') }}</h3>
             <h3 class="text-sm text-[#666666]">{{ t('c_section6_item1_desc') }}</h3>
           </div>
         </div>
-        <div class="section6-item rounded-lg w-full md:w-[70%] bg-[#f7f8f2] md:translate-x-20  !py-8 !px-4 !mt-10 flex justify-between items-center">
+        <div class="section6-item rounded-lg w-full md:w-[70%] bg-[#f7f8f2] md:translate-x-20  !py-8 !px-4 !mt-10 flex justify-between items-center fade-in">
           <Section6Item2 />
           <div class="flex-1 flex flex-col items-start justify-center !ml-4">
             <h3 class="text-lg font-bold">{{ t('c_section6_item2_title') }}</h3>
             <h3 class="text-sm text-[#666666]">{{ t('c_section6_item2_desc') }}</h3>
           </div>
         </div>
-        <div class="section6-item rounded-lg w-full md:w-[70%] bg-[#f7f8f2] md:-translate-x-20  !py-8 !px-4 !mt-10 flex justify-between items-center">
+        <div class="section6-item rounded-lg w-full md:w-[70%] bg-[#f7f8f2] md:-translate-x-20  !py-8 !px-4 !mt-10 flex justify-between items-center fade-in">
           <Section6Item3 />
           <div class="flex-1 flex flex-col items-start justify-center !ml-4">
             <h3 class="text-lg font-bold">{{ t('c_section6_item3_title') }}</h3>
             <h3 class="text-sm text-[#666666]">{{ t('c_section6_item3_desc') }}</h3>
           </div>
         </div>
-    <div class="flex flex-col items-center justify-center">
+    <div class="flex flex-col items-center justify-center fade-in">
         <div class="flex justify-center items-center flex-wrap !mt-20">
             <h3 class="text-lg font-bold md:!mr-10">{{ t('c_section6_end_title') }}</h3>
         </div>

@@ -1,7 +1,7 @@
 <template>
     <div ref="sectionRef" id="service" class="top-section flex justify-center items-center !p-4 w-full -translate-y-40">
         <div class="section2 flex flex-col bg-white shadow-lg items-center rounded-lg !p-20 justify-start w-full md:max-w-[1100px]">
-            <h1 class="text-2xl font-bold !mb-10">{{ t('v_section2_title') }}</h1>
+            <h1 class="text-2xl font-bold !mb-10 fade-in">{{ t('v_section2_title') }}</h1>
             <div class="grid grid-cols-1 gap-10 gap-y-20 md:grid-cols-3">
                     <div class="flex flex-col items-center justify-between fade-in">
                             <section21 />

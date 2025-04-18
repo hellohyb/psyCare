@@ -1,34 +1,34 @@
 <template>
     <div ref="sectionRef" id="product" class="top-section flex justify-center items-center !px-4 w-full relative">
         <video :src="videoUrl" autoplay muted loop class="absolute top-0 left-0 -z-1 w-full h-full object-cover"></video>
-        <div class="section3 text-white flex flex-col items-start justify-start !py-20 shadow-lg w-full h-180 md:max-w-[1100px]">
-            <h1 class="text-2xl font-bold !mb-4">{{ t('v_section3_title') }}</h1>
-            <div class="flex justify-start items-center !my-2">
+        <div class="section3 text-white flex flex-col items-start justify-center !py-20 shadow-lg w-full h-180 md:max-w-[1100px]">
+            <h1 class="text-2xl font-bold !mb-4 fade-in">{{ t('v_section3_title') }}</h1>
+            <div class="flex justify-start items-center !my-2 fade-in">
                 <HelpIcon />
                 <h2 class="text-sm font-bold !ml-4">{{ t('v_section3_item1') }}</h2>
             </div>
 
-            <div class="flex justify-start items-center !my-2">
+            <div class="flex justify-start items-center !my-2 fade-in">
                 <HelpIcon />
                 <h2 class="text-sm font-bold !ml-4">{{ t('v_section3_item2') }}</h2>
             </div>
 
-            <div class="flex justify-start items-center !my-2">
+            <div class="flex justify-start items-center !my-2 fade-in">
                 <HelpIcon />
                 <h2 class="text-sm font-bold !ml-4">{{ t('v_section3_item3') }}</h2>
             </div>
 
-            <div class="flex justify-start items-center !my-2">
+            <div class="flex justify-start items-center !my-2 fade-in">
                 <HelpIcon />
                 <h2 class="text-sm font-bold !ml-4">{{ t('v_section3_item4') }}</h2>
             </div>
 
-            <div class="flex justify-start items-center !my-2">
+            <div class="flex justify-start items-center !my-2 fade-in">
                 <HelpIcon />
                 <h2 class="text-sm font-bold !ml-4">{{ t('v_section3_item5') }}</h2>
             </div>
 
-            <button @click="handleBookConsultation" class="text-sm cursor-pointer font-bold flex justify-center items-center !mt-10 !px-6 !py-4 bg-[#004e3b] text-white rounded-md">
+            <button @click="handleBookConsultation" class="fade-in text-sm cursor-pointer font-bold flex justify-center items-center !mt-10 !px-6 !py-4 bg-[#004e3b] text-white rounded-md">
                 <span class="!mr-2">{{ t('v_section3_button') }}</span>
                 <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M1 8H15M15 8L8 15M15 8L8 1" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
