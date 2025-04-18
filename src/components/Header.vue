@@ -113,6 +113,11 @@ const goToConsultant = () => {
 }
 const goToPage = (page) => {
     router.push(page)
+    // 滚动到顶部
+    window.scrollTo({
+        top: 0,
+        behavior:'instant'
+    })
 }
 // 监听滚动事件
 const handleScroll = () => {
