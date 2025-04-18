@@ -1,26 +1,29 @@
 <template>
   <div ref="sectionRef" id="homePage"
-   class="top-section mobile md:pc flex justify-center items-center w-full h-[900px] md:h-[1100px]">
-    <div class="!px-10 w-full flex flex-col justify-center items-center md:w-[1100px] -translate-y-20">
-      <h1 class="text-4xl font-bold fade-in">{{ t('section1') }}</h1>
-      <div class="description fade-in">{{ t('section2') }}</div>
-      <button @click="handleBookConsultation" class="!px-6 !py-4 text-white rounded-md bg-teal-600 cursor-pointer hover:bg-teal-800 fade-in">{{ t('btn1_text') }}</button>
+   class="top-section mobile md:pc flex justify-center items-center md:items-center w-full h-[900px] md:h-[1000px]">
+    <div class="!px-10 w-full flex flex-col justify-center gap-y-4 items-start md:w-[1100px] -translate-y-20">
+      <h1 class="text-5xl font-bold fade-in">{{ t('c_top_title') }}</h1>
+      <div class="text-2xl description fade-in">{{ t('c_top_title_desc') }}</div>
+     <div class="flex">
+        <button @click="handleBookConsultation('home')" class="!px-8 !py-4 text-white font-bold rounded-md bg-teal-600 cursor-pointer hover:bg-teal-800 fade-in">{{ t('c_top_btn1') }}</button>
+        <button @click="handleBookConsultation('influence')" class="!px-8 !py-4 !ml-10 text-white font-bold rounded-md bg-[#47776b] cursor-pointer hover:bg-teal-800 fade-in">{{ t('c_top_btn2') }}</button>
+     </div>
     </div>
   </div>
 </template>
 
 <script setup>
-import topPng from '../../assets/Home/top.png';
-import mobilePng from '../../assets/Home/moblie-bg.png'
 import { useI18n } from 'vue-i18n'
 import { ref, onMounted } from 'vue'
 
 const { t } = useI18n()
 const sectionRef = ref(null)
 
-const handleBookConsultation = () => {
-  // 获取目标元素
-  const targetElement = document.querySelector(`#product`)
+const handleBookConsultation = (type) => {
+
+    if(type === 'influence'){
+      // 获取目标元素
+      const targetElement = document.querySelector(`#influence`)
     if (targetElement) {
         // 计算目标位置，减去100px的偏移量（可以根据需要调整）
         const targetPosition = targetElement.offsetTop - 100
@@ -30,6 +33,9 @@ const handleBookConsultation = () => {
             behavior: 'smooth'
         })
     }
+}else{
+    window.open('https://my.psycare.world/login', '_blank')
+}
 }
 
 onMounted(() => {
@@ -56,7 +62,6 @@ onMounted(() => {
 .description {
     margin: 20px 0;
 }
-
 .fade-in {
     opacity: 0;
     transform: translateY(20px);
@@ -70,16 +75,15 @@ onMounted(() => {
 
 @media screen and (min-width: 768px) {
   .top-section {
-    background: url('../../assets/Home/top.png') no-repeat;
+    background: url('../../assets/Consulate/consulate-pc.png') no-repeat;
     background-position: center;
     background-size: cover;
   }
 }
 @media  screen and (max-width: 767px) {
     .top-section{
-      background: url('../../assets/Home/moblie-bg.png') no-repeat;
-      background-position: center;
-      background-size: cover;
+      background: url('../../assets/Consulate/consulate-mobile.png') no-repeat;
+      background-size: 100% 100%;
     }
 }
 </style>

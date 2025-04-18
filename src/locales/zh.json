@@ -104,5 +104,143 @@
     "footer_about":"公司",
     "footer_about_item1":"关于我们",
     "footer_about_item2":"联系我们",
-    "footer_contact":"关注我们"
+    "footer_contact":"关注我们",
+
+
+
+
+    
+
+    "v_section2_title":"我们的服务",
+    "v_section2_item1_title":"专业咨询师",
+    "v_section2_item1_desc":"配备先进的 AI 辅助系统，助力全流程专业引导。",
+    "v_section2_item2_title":"快捷预约",
+    "v_section2_item2_desc":"与持牌心理健康专业人士安排会谈",
+    "v_section2_item3_title":"个性化建议",
+    "v_section2_item3_desc":"随时随地查看咨询记录和诊疗师提供的个性化建议，让PsyCare伴随你的生活！",
+    "v_section2_item4_title":"心理健康信息",
+    "v_section2_item4_desc":"获取可靠且最新的心理健康资源",
+    "v_section2_item5_title":"心理教育",
+    "v_section2_item5_desc":"了解心理健康和幸福策略",
+
+    "v_section3_title":"您的PsyCare使用手册",
+    "v_section3_item1":"如何开启AI聊天助手?",
+    "v_section3_item2":"如何线上与专业的诊疗师预约问诊？",
+    "v_section3_item3":"如何查看问诊记录与咨询师诊疗建议？",
+    "v_section3_item4":"如何填写与提交问卷自测自己的心理健康情况？",
+    "v_section3_item5":"如何编辑和更改自己的个人资料与信息？",
+    "v_section3_button":"开始使用",
+
+
+    "v_section4_title":"您的信任，我们用心守护",
+    "v_section4_title_desc1":"在 PsyCare，我们相信，每一段倾诉、每一次对话，都是宝贵且私密的。",
+    "v_section4_title_desc2":"无论是您写下的文字、上传的记录，还是与咨询师的交流，",
+    "v_section4_title_desc3":"我们都会像对待朋友的心事一样，用心守护。❤️",
+    "v_section4_item1":"您的资料（包括音频、咨询记录、SOAP笔记等）都加密存储在安全服务器中，不会被上传至任何公共互联网平台或外部服务。",
+    "v_section4_item2":"所有数据仅限为您提供服务的专业诊疗师查看与使用，用于了解您的状况、制定合适的支持方案，帮助您更好地走出困境。",
+    "v_section4_item3":"在PsyCare，您始终拥有完整的数据主权：可随时申请查看、更正或删除您的任何个人信息。",
+    "v_section4_item4":"我们从不将任何数据用于营销、推荐或第三方合作。我们从不未经允许地使用或分享您留下的每一句话。",
+
+    "v_section4_title2":"🔐 信息安全，我们认真对待",
+    "v_section4_title3":"🚫 您的隐私，我们从不妥协",
+    "v_section4_desc":"我们坚信，技术不应冷漠，它应该是关怀的延伸。PsyCare 所做的一切，是为了让您在安心、安全的环境中，慢慢走出阴霾，迎向光亮。",
+    "v_section4_desc2":"如您有任何疑问或顾虑，请联系我们： 📧 ",
+    "v_section4_desc3":"support{'@'}Psycare.Ai",
+
+
+
+    "c_section2_title":"我们的服务",
+    "c_section2_item1_title":"咨询日历",
+    "c_section2_item1_desc":"每日访客清晰可见。便捷的在线预约服务，助力用户安心表达、逐步走出心理困境。",
+    "c_section2_item2_title":"AI辅助加持",
+    "c_section2_item2_desc":"与持牌心理健康专咨询中，PsyCare AI实时辅助分析，您可随时查看患者知识图谱，便捷编辑诊断方案与SOAP笔记。业人士安排会谈",
+    "c_section2_item3_title":"数据一体化",
+    "c_section2_item3_desc":"咨询中，您可随时上传资料，系统将自动安全归档，方便后续查看与跟进，保障隐私，助力问诊留痕与追溯。",
+    "c_section2_item4_title":"心理健康信息",
+    "c_section2_item4_desc":"普及心理健康信息，提升用户的健康意识。",
+    "c_section2_item5_title":"心理教育",
+    "c_section2_item5_desc":"传递心理健康知识，提升用户对心理健康的重视与认知。",
+
+    
+
+    "c_top_title":"PsyCare 您的人工智能助手",
+    "c_top_title_desc":"智能相伴，专业随行",
+    "c_top_btn1":"个人中心",
+    "c_top_btn2":"问卷调查",
+
+    "c_section3_title1":"AI 辅助诊断",
+    "c_section3_title1_desc1":"让信息整合更高效，诊疗决策更精准",
+    "c_section3_title1_desc1_content":"PsyCare 提供 AI 驱动的聊天助手，可在求助人与 AI 互动过程中自 动提取有价值的信息，并将其结构化保存至患者画像与数据库中， 为后续问诊提供有力支持。",
+
+    "c_section3_title2_desc2":"作为咨询师，您可以：",
+    "c_section3_title2_desc2_item1":"快速查看患者的知识图谱与行为情绪轨迹",
+    "c_section3_title2_desc2_item2":"参考系统整理出的关键信息，优化初诊评估",
+    "c_section3_title2_desc2_item3":"直接编辑或补充诊断记录、SOAP笔记及治疗方案",
+    "c_section3_title2_desc2_item4":"实时同步线上与线下数据，确保连续性与一致性",
+
+    "c_section3_title2_end":"AI 是您的智能助手，而非替代者，所有记录与修改权始终掌握在您手中。让数据为你所用，提升专业服务效率。",
+
+    "c_section3_title3":"资料统一收敛",
+    "c_section3_title3_desc1":"数据整合更高效，诊疗衔接更顺畅",
+    "c_section3_title3_desc1_content":"所有咨询相关的数据——包括音频、笔记、辅助文件与图文资料——都可统一上传、整理归档，系统自动同步，确保后续问诊更加精准、连贯。",
+    "c_section3_title3_desc1_content2":"在每一次问诊过程中，您都可以轻松打开患者的知识图谱，快速掌握其情绪波动、健康背景与既往记录，并可随时编辑诊断信息、治疗方案以及 SOAP 笔记。",
+    "c_section3_title3_desc2":"我们相信：",
+    "c_section3_title3_desc2_item":"高效记录，是专业服务的基石；数据赋能，是诊疗决策的加速器。让资料流动起来，为每一次会谈打好基础。",
+
+
+    "c_section4_title":"我们的客户",
+    "c_section4_title_desc":"他们这样说——",
+
+    "c_section4_swiper1_desc":"“PsyCare 让我可以高效地管理患者信息和SOAP记录。AI助手的分析节省了我大量前期沟通的时间，让我能更专注在干预策略的制定上。”",
+    "c_section4_swiper1_author":"许心怡 博士",
+    "c_section4_swiper1_author_desc":"注册心理咨询师 CBT专家",
+
+    "c_section4_swiper3_desc":"PsyCare 不只是工具，更是我的数字搭档。每次线下问诊结束后，我都会上传录音和补充材料，系统化的整理让我更安心。",
+    "c_section4_swiper3_author":"王雅丽 医师",
+    "c_section4_swiper3_author_desc":"精神科医师 精神分析取向",
+
+    "c_section4_swiper2_desc":"我很喜欢知识图谱功能，患者的状态演变一目了然。每次上线诊疗时，我都能快速进入角色，不必翻阅冗长的历史记录。",
+    "c_section4_swiper2_author":"林志宇 老师",
+    "c_section4_swiper2_author_desc":"临床心理硕士 儿童与青少年方向",
+
+    "c_section4_end":"超过 100 位咨询师 正在使用 PsyCare 我们懂专业的你需要怎样的支持。",
+
+    "c_section5_title":"咨询师问卷管理",
+    "c_section5_title_desc1":"在PsyCare，您可以轻松创建、管理专属于您的心理问卷。",
+    "c_section5_title_desc2":"无论是初诊评估、疗程反馈，还是针对特定症状的追踪，我们都为您提供灵活、专业的工具支持。",
+
+    "c_window1_title":"焦虑水平评估",
+    "c_window_head1":"问题编号",
+    "c_window_head2":"问题内容",
+    "c_window1_row1":"你是否感到心慌或呼吸急促",
+    "c_window1_row2":"你是否担心未来可能发生的不确定事件",
+    "c_window1_row3":"焦虑是否影响你的工作或社交",
+
+    "c_window2_title":"情绪状态自评问卷",
+    "c_window2_row1":"最近两周你是否经常情绪低落",
+    "c_window2_row2":"你是否对原本感兴趣的事情失去兴趣",
+    "c_window2_row3":"你是否经常感到疲惫、乏力？",
+    "c_window2_row4":"请简单描述你最近的情绪低落时的具体感受",
+
+    "c_window3_title":"初访者背景问卷",
+    "c_window3_row1":"你希望通过心理咨询解决什么问题？",
+    "c_window3_row2":"你是否有过心理咨询或治疗经验？",
+    "c_window3_row3":"是否在服用精神药物？",
+    "c_window3_row4":"咨询中你最关心的问题是什么？",
+
+    "c_row1":"Q1",
+    "c_row2":"Q2",
+    "c_row3":"Q3",
+    "c_row4":"Q4",
+
+    "c_section6_title":"您的信任，我们用心守护",
+    "c_section6_title_desc1":"在 PsyCare，我们不仅致力于守护来访者的隐私，也同样重视每一位专业咨询师的数据权益与使用安全。",
+    "c_section6_item1_title":"诊疗空间，安全专属",
+    "c_section6_item1_desc":"您在平台上记录的所有数据——包括患者档案、SOAP 笔记、音频记录与诊疗方案——均被端对端加密存储，确保数据仅对授权本人可见，不被外泄或篡改。",
+    "c_section6_item2_title":"权限可控，数据有边界",
+    "c_section6_item2_desc":"我们为每位诊疗师提供了专属账号与权限设置，确保仅能访问属于您本人咨询的患者资料。所有操作行为均有安全日志记录，确保透明可追溯。",
+    "c_section6_item3_title":"信息只为更好服务",
+    "c_section6_item3_desc":"您所填写的患者信息、诊疗内容，仅用于提升治疗质量和患者体验，不会被用于任何形式的商业分析或第三方使用。PsyCare 承诺：从不将平台上的咨询内容用于营销、推广或非服务目的的数据处理。",
+    "c_section6_end_title":"🔐 信息安全与隐私保障 – 给每位咨询师的承诺",
+    "c_section6_end_desc":"我们相信，隐私的守护是疗愈关系的重要一环。您与患者的互动，始终在安全、私密、可信的空间中进行。" 
 }

@@ -12,15 +12,25 @@
                     <Logo/>
                 </div>
                 <!-- 桌面端菜单 -->
-                <div class="menu-list  hidden md:flex items-center justify-around flex-1 h-[60%]">
+                <div class="menu-list  hidden md:flex items-center justify-around flex-1 h-[60%]"
+                    :style="{'justify-content':(route.name === 'visitor' || route.name === 'consultant') ? 'start' : ''
+                            
+                    }"
+                >
                     <li v-for="(item, index) in navList" :key="`menu-${index}`"
                         class="menu-item list-none h-full flex justify-center items-center text-[#333333]"
                         @click="handleSelectMenu(item)"
-                        :class="{'active':(item.id === currentMenuId)}"
+                        :class="{'active':(item.id === currentMenuId),
+                        
+                        }"
+                        :style="{'margin-left':(route.name === 'visitor' || route.name === 'consultant') ? '40px' : '',
+                        'justify-content':(route.name === 'visitor' || route.name === 'consultant') ? 'center' : 'flex-start !important'
+
+                        }"
                     >
                         <a :href="`#${item.desc}`">{{ item.name }}</a>
                     </li>
-                   <div class="right-btn h-12 w-70 flex justify-between gap-x-2">
+                   <div v-if="route.path !== '/visitor' && route.path !== '/consultant'" class="right-btn h-12 w-70 flex justify-between gap-x-2">
                         <button @click="goToVisitor" class="btn-1 w-full flex justify-center bg-gray-100  items-center !shadow-orange-50 rounded-md cursor-pointer hover:bg-yellow-50">
                             <Viewer/>
                             <span>{{ t('visitor') }}</span>
@@ -88,14 +98,12 @@ const isScrolled = ref(false)
 const router = useRouter()
 const route = useRoute()
 const goToVisitor = () => {
-    // 跳转至访客页面
-    window.open('https://my.psycare.ai/login', '_blank')
+    router.push('/visitor')
 }
 
 const goToConsultant = () => {
     // 跳转至咨询师页面
-    window.open('https://my.psycare.ai/login', '_blank')
-
+    router.push('/consultant')
 }
 // 监听滚动事件
 const handleScroll = () => {
@@ -146,7 +154,11 @@ const handleSelectMenu = (item) => {
     const targetElement = document.querySelector(`#${item.desc}`)
     if (targetElement) {
         // 计算目标位置，减去100px的偏移量（可以根据需要调整）
-        const targetPosition = targetElement.offsetTop - 100
+        let targetPosition = targetElement.offsetTop - 100
+        if(item.id === 2){
+            targetPosition = targetElement.offsetTop - 200
+        }
+        
         
         // 平滑滚动到目标位置
         window.scrollTo({
