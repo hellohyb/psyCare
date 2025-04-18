@@ -1,5 +1,5 @@
 <template>
-    <div class="header flex justify-center items-center flex-col w-full py-40 !mt-4 md:!mt-0 md:h-20"
+    <div class="header flex justify-center items-center flex-col w-full !mt-4 md:!mt-0 md:h-20"
         :class="{'h-auto': isMobileMenuOpen, 'header-scrolled': isScrolled}"
     >
         <div class="header-main w-[90%] rounded-4xl bg-white/10 backdrop-blur-md px-4 flex justify-between md:max-w-[1100px] md:rounded-none md:bg-transparent md:backdrop-blur-none"
@@ -7,12 +7,12 @@
         
         >
             <div class="left flex items-center px-20 justify-between w-full">
-                <div class="logo" style="margin-right: 10px;margin-left: 10px;">
+                <div @click="goToPage('/')" class="logo cursor-pointer" style="margin-right: 10px;margin-left: 10px;">
                     <!-- <img :src="Logo" class="object-cover h-12 md:h-full" alt=""> -->
                     <Logo/>
                 </div>
                 <!-- 桌面端菜单 -->
-                <div class="menu-list  hidden md:flex items-center justify-around flex-1 h-[60%]"
+                <div class="menu-list !ml-8  hidden md:flex items-center justify-start gap-x-10 flex-1 h-[60%]"
                    
                 >
                     <li v-for="(item, index) in navList" :key="`menu-${index}`"
@@ -24,7 +24,9 @@
                     >
                         <a :href="`#${item.desc}`">{{ item.name }}</a>
                     </li>
-                   <div class="right-btn h-12 w-70 flex justify-between gap-x-2">
+
+                </div>
+                <div class="hidden md:flex right-btn h-12 w-70 flex justify-between gap-x-2">
                         <button v-if="route.path !== '/'" @click="goToPage('/')" class="btn-1 w-full flex justify-center bg-gray-100  items-center !shadow-orange-50 rounded-md cursor-pointer hover:bg-yellow-50">
                             <HomeIcon/>
                             <span>{{ t('home') }}</span>
@@ -40,7 +42,6 @@
                             <span>{{ t('consultant') }}</span>
                         </button>
                    </div>
-                </div>
                 <!-- 移动端菜单按钮 -->
                 <button class="md:hidden" style="margin-right: 10px;" @click="toggleMobileMenu">
                     <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
