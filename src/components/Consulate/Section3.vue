@@ -37,74 +37,14 @@
 
 <script setup>
 import { useI18n } from 'vue-i18n';
-import HelpIcon from '../icon/visitor/help.vue';
+
 import IconSection31 from '../../components/icon/consulate/section31.vue';
 import IconSection32 from '../../components/icon/consulate/section32.vue';
 import IconSection33 from '../../components/icon/consulate/section33.vue';
-import item1 from '../../assets/Home/section3/section3-1.png';
-import item2 from '../../assets/Home/section3/section3-2.png';
-import item3 from '../../assets/Home/section3/section3-3.png';
-import item4 from '../../assets/Home/section3/section3-4.png';
-import item5 from '../../assets/Home/section3/section3-r-1.png';
-import item6 from '../../assets/Home/section3/section3-r-2.png';
-import item7 from '../../assets/Home/section3/section3-r-3.png';
 import { ref, onMounted } from 'vue';
 
 const { t } = useI18n()
 const sectionRef = ref(null)
-
-const itemList = [
-    {
-        id: 1,
-        title: t('section3_item1_title'),
-        desc1: t('section3_item1_des1'),
-        desc2: t('section3_item1_des2'),
-        img: item1,
-    },
-    {
-        id: 2,
-        title: t('section3_item2_title'),
-        desc1: t('section3_item2_des1'),
-        desc2: t('section3_item2_des2'),
-        img: item2,
-    },
-    {
-        id: 3,
-        title: t('section3_item3_title'),
-        desc1: t('section3_item3_des1'),
-        desc2: t('section3_item3_des2'),
-        img: item3,
-    },
-    {
-        id: 4,
-        title: t('section3_item4_title'),
-        desc1: t('section3_item4_des1'),
-        desc2: t('section3_item4_des2'),
-        img: item4,
-    },
-]
-const visitorList = [
-    {
-        id: 1,
-        title: t('section3_item5_title'),
-        desc: [t('section3_item5_des1'), t('section3_item5_des2')],
-        img: item5,
-    },
-    {
-        id: 2,
-        title: t('section3_item6_title'),
-        desc: [t('section3_item6_des1'), t('section3_item6_des2')],
-        img: item6,
-    },
-    {
-        id: 3,
-        title: t('section3_item7_title'),
-        desc: [t('section3_item7_des1'), t('section3_item7_des2'), t('section3_item7_des3'),
-            t('section3_item7_des4'), t('section3_item7_des5')
-        ],
-        img: item7,
-    }
-]
 
 onMounted(() => {
     const observer = new IntersectionObserver((entries) => {

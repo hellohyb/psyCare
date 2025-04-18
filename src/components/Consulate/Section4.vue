@@ -93,7 +93,7 @@
                 <!-- 移动端显示 -->
             <div class="grid grid-cols-1 gap-y-4 md:hidden">
                 <div
-                    class="swiper-slide-content bg-white h-[280px] box-border flex flex-col justify-center md:justify-between rounded-xl !p-10 relative">
+                    class="swiper-slide-content bg-white h-auto box-border flex flex-col justify-center md:justify-between rounded-xl !p-10 relative">
                     <h3 class="text-md leading-8 !mb-4 md:!mb-10">{{ t('c_section4_swiper1_desc') }}</h3>
                     <div class="flex justify-start items-center">
                         <img src="../../assets/Consulate/xuxinyi.png" alt="">
@@ -108,7 +108,7 @@
                 </div>
 
                 <div
-                            class="swiper-slide-content bg-white h-[280px]  box-border flex flex-col justify-center md:justify-between rounded-xl !p-10 relative">
+                            class="swiper-slide-content bg-white h-auto   box-border flex flex-col justify-center md:justify-between rounded-xl !p-10 relative">
                             <h3 class="text-md leading-8 !mb-4 md:!mb-10">{{ t('c_section4_swiper2_desc') }}</h3>
                             <div class="flex justify-start items-center">
                                 <img src="../../assets/Consulate/linzhiyu.png" alt="">
@@ -123,7 +123,7 @@
                         </div>
 
                         <div
-                            class="swiper-slide-content bg-white h-[280px] box-border flex flex-col justify-center md:justify-between rounded-xl !p-10 relative">
+                            class="swiper-slide-content bg-white h-auto  box-border flex flex-col justify-center md:justify-between rounded-xl !p-10 relative">
                             <h3 class="text-md leading-8 !mb-4 md:!mb-10">{{ t('c_section4_swiper3_desc') }}</h3>
                             <div class="flex justify-start items-center">
                                 <img src="../../assets/Consulate/wangyali.png" alt="">

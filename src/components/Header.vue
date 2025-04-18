@@ -55,10 +55,10 @@
             class="mobile-menu text-black w-[90%] md:hidden z-50 rounded-b-4xl !p-4 bg-white/10 backdrop-blur-md overflow-hidden"
             :class="{'h-0': !isMobileMenuOpen, 'h-auto': isMobileMenuOpen}"
         >
-            <div class="py-2 flex flex-row gap-4">
+            <div class="flex flex-row gap-2">
                 <div v-for="(item, index) in navList" 
                     :key="`mobile-menu-${index}`"
-                    class=" transition-all duration-300 border-b-[2px] border-transparent !my-5"
+                    class=" transition-all duration-300 border-b-[2px] border-transparent !my-5 text-sm"
                     :class="{'activeMenu': item.id === currentMenuId}"
                     @click="handleSelectMenu(item)"
                 >

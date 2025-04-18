@@ -41,7 +41,7 @@
 <script setup>
 import { useI18n } from 'vue-i18n';
 import videoUrl from '../../assets/Visitor/visitor.mp4';
-import HelpIcon from '../icon/visitor/help.vue';
+import HelpIcon from '../../components/icon/visitor/Help.vue';
 import item1 from '../../assets/Home/section3/section3-1.png';
 import item2 from '../../assets/Home/section3/section3-2.png';
 import item3 from '../../assets/Home/section3/section3-3.png';
