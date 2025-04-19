@@ -1,7 +1,7 @@
 <template>
     <div ref="sectionRef" id="service"
         class="top-section bg-[#f6f7f0] !py-20 !mt-40 flex justify-center items-center !p-4 w-full">
-        <div class="section2 flex flex-col items-center rounded-lg justify-start w-full md:max-w-[1100px]">
+        <div class="section2 flex flex-col items-center rounded-lg justify-start w-full md:max-w-[700px]">
             <h1 class="text-2xl font-bold !mb-4">{{ t('c_section4_title') }}</h1>
             <h3 class="text-sm font-bold !mb-4 md:!mb-10">{{ t('c_section4_title_desc') }}</h3>
             <div class="hidden md:block !mt-10 w-full relative">
