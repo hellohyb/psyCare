@@ -32,7 +32,7 @@
                     :creative-effect="{
                         prev: {
                             shadow: false,
-                            translate: [0, 0, 0],
+                            translate: [0, '-100%', 0],
                         },
                         next: {
                             translate: [0, '100%', 0],
