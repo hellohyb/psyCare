@@ -17,11 +17,12 @@
                     {{ item.title }}
                 </button>
             </div>
-            <div class="swiper-wrapper w-3/5 translate-x-20 rounded-lg">
+
+            <div class="swiper-wrapper w-3/5 translate-x-20 !rounded-tl-4xl">
                 <Swiper
                     :modules="[SwiperAutoplay, SwiperEffectCreative]"
                     :slides-per-view="1"
-                    :space-between="30"
+                    :space-between="0"
                     :effect="'creative'"
                     :direction="'vertical'"
                     :autoplay="{
@@ -30,23 +31,22 @@
                     }"
                     :creative-effect="{
                         prev: {
-                            shadow: true,
-                            translate: [0, '-20%', -1],
+                            shadow: false,
+                            translate: [0, 0, 0],
                         },
                         next: {
                             translate: [0, '100%', 0],
                         },
                     }"
+                    :speed="800"
                     @swiper="onSwiper"
                     @slideChange="onSlideChange"
-                    class="w-full h-full !rounded-lg !overflow-hidden"
+                    class="w-full h-full !overflow-hidden !rounded-tl-4xl"
                 >
                   
-                      <SwiperSlide v-for="item in swiperList" :key="item.id" style="overflow: hidden;" class="!rounded-lg">
-                          <img :src="item.imgPC" :alt="item.title" class="w-full h-full object-cover rounded-lg" />
-                      </SwiperSlide>
-                    
-                    
+                    <SwiperSlide v-for="item in swiperList" :key="item.id" class="!rounded-tl-4xl overflow-hidden">
+                        <img :src="item.imgPC" :alt="item.title" class="w-full h-full object-cover !rounded-tl-4xl" />
+                    </SwiperSlide>
                 </Swiper>
             </div>
        </div>
@@ -211,7 +211,19 @@
   }
   .swiper-wrapper{
     background:url('../../assets/Home/section5/device-bg.png') no-repeat !important;
-    padding: 30px 0 0 30px;
+    padding: 34px 0 0 27px;
     background-size: 100% 100%;
+  }
+  
+  :deep(.swiper) {
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
+  }
+  
+  :deep(.swiper-slide) {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
   }
   </style>

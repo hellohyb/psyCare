@@ -4,7 +4,7 @@
         <div class="section2 flex flex-col items-center rounded-lg justify-start w-full md:max-w-[1100px]">
             <h1 class="text-2xl font-bold !mb-4">{{ t('c_section4_title') }}</h1>
             <h3 class="text-sm font-bold !mb-4 md:!mb-10">{{ t('c_section4_title_desc') }}</h3>
-            <div class="hidden md:block !mt-20 w-full relative">
+            <div class="hidden md:block !mt-10 w-full relative">
                 <Swiper :modules="[SwiperNavigation, SwiperPagination, SwiperAutoplay]" :slides-per-view="1"
                     :space-between="30" :navigation="{
                         nextEl: '.swiper-button-next-custom',
@@ -12,15 +12,16 @@
                     }" :autoplay="{
                         delay: 3000,
                         disableOnInteraction: false,
-                    }" :speed="1000" :breakpoints="{
+                    }" :speed="1000" :loop="true"
+                    :breakpoints="{
                         768: {
-                            slidesPerView: 2,
+                            slidesPerView: 1,
                             spaceBetween: 20,
                         }
                     }" class="w-full">
                     <SwiperSlide>
                         <div
-                            class="swiper-slide-content bg-white h-[280px] box-border flex flex-col justify-between rounded-xl !p-10 relative">
+                            class="swiper-slide-content bg-white h-[250px] box-border flex flex-col justify-between rounded-xl !p-10 relative w-full md:w-[calc(100%-20px)] mx-auto">
                             <h3 class="text-md leading-8 !mb-10">{{ t('c_section4_swiper1_desc') }}</h3>
                             <div class="flex justify-start items-center">
                                 <img src="../../assets/Consulate/xuxinyi.png" alt="">
@@ -37,7 +38,7 @@
 
                     <SwiperSlide>
                         <div
-                            class="swiper-slide-content bg-white h-[280px]  box-border flex flex-col justify-between rounded-xl !p-10 relative">
+                            class="swiper-slide-content bg-white h-[250px]  box-border flex flex-col justify-between rounded-xl !p-10 relative">
                             <h3 class="text-md leading-8 !mb-10">{{ t('c_section4_swiper2_desc') }}</h3>
                             <div class="flex justify-start items-center">
                                 <img src="../../assets/Consulate/linzhiyu.png" alt="">
@@ -54,7 +55,7 @@
 
                     <SwiperSlide>
                         <div
-                            class="swiper-slide-content bg-white h-[280px] box-border flex flex-col justify-between rounded-xl !p-10 relative">
+                            class="swiper-slide-content bg-white h-[250px] box-border flex flex-col justify-between rounded-xl !p-10 relative">
                             <h3 class="text-md leading-8 !mb-10">{{ t('c_section4_swiper3_desc') }}</h3>
                             <div class="flex justify-start items-center">
                                 <img src="../../assets/Consulate/wangyali.png" alt="">
@@ -73,14 +74,14 @@
                 <div
                     class="custom-navigation-buttons w-full flex justify-between  px-2 md:px-4 z-10 pointer-events-none">
                     <button
-                        class="swiper-button-prev-custom  absolute -left-20 top-1/2 transform -translate-y-1/2 w-10 h-10 md:w-12 md:h-12 bg-white rounded-full flex items-center justify-center shadow-md pointer-events-auto focus:outline-none">
+                        class="swiper-button-prev-custom  absolute -left-15  top-2/5 transform -translate-y-1/2 w-10 h-10 md:w-12 md:h-12 bg-white rounded-full flex items-center justify-center shadow-md pointer-events-auto focus:outline-none">
                         <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
                             stroke="currentColor">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
                         </svg>
                     </button>
                     <button
-                        class="swiper-button-next-custom  absolute -right-20  top-1/2 transform -translate-y-1/2 w-10 h-10 md:w-12 md:h-12 bg-white rounded-full flex items-center justify-center shadow-md pointer-events-auto focus:outline-none">
+                        class="swiper-button-next-custom  absolute -right-15  top-2/5 transform -translate-y-1/2 w-10 h-10 md:w-12 md:h-12 bg-white rounded-full flex items-center justify-center shadow-md pointer-events-auto focus:outline-none">
                         <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
                             stroke="currentColor">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />

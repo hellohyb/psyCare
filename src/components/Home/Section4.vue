@@ -8,10 +8,10 @@
                     background: `url(${askContent}) no-repeat`,
                     backgroundSize: '100% 100%',
                     backgroundPosition: 'center center',
-                    height: `420px`
+                    height: `${textHeight}px`
                 }" 
                  @click="startTyping" 
-                class="w-[330px] md:w-[500px] md:!px-2 relative top-10 left-10 md:top-20 md:left-30 z-18 object-cover
+                class="w-[330px] md:w-[500px] md:!px-2 relative top-10 left-10 md:top-35 md:left-30 z-18 object-cover
                         flex items-center justify-center font-bold
                         text-[#666666]
                         transition-all duration-300
@@ -25,13 +25,13 @@
                      <!-- visitort提问表情 -->
                      <img :src="currentEmoji" 
                         alt="emotion" 
-                        class="absolute top-84 right-30 md:right-60 md:top-72 z-19 object-cover transition-all duration-300" 
+                        class="absolute bottom-8 right-30 md:right-30 md:bottom-10 z-19 object-cover transition-all duration-300" 
                      />
                      <img :src="pointer" 
-                        @click="startTyping" 
+                        @click="startTyping"
                         alt="pointer" 
                           v-if="step < 3"
-                        class="absolute left-10 top-67 md:top-70 md:left-20 z-19 w-[100px] h-auto md:w-[90px] object-cover transition-all duration-300" 
+                        class="absolute left-10 bottom-0 md:bottom-5 md:left-50 z-19 w-[100px] h-auto md:w-[90px] object-cover transition-all duration-300" 
                      />
                 </div>
                 <!-- visitort-->
@@ -101,7 +101,7 @@
   
   <script setup>
   import visitor from '../../assets/Home/section4/visitor.png';
-  import askContent from '../../assets/Home/section4/ask-content.png';
+  import askContent from '../../assets/Home/section4/talk.png';
   import descContent from '../../assets/Home/section4/desc-content.png';
   import happy from '../../assets/Home/section4/happy.png';
   import sad from '../../assets/Home/section4/sad.png';
@@ -126,7 +126,7 @@
     t('visitor_ask1'),
     t('visitor_ask2'),
   ];
-  const textHeight = ref(330);
+  const textHeight = ref(270);
   const visitorTop = ref(50);
   const visitorNameTop = ref(160);
   const visitorDescTop = ref(550);
@@ -181,7 +181,7 @@
   onMounted(() => {
     // 初始化容器高度
     if (textRef.value) {
-      textHeight.value = textRef.value.scrollHeight + 100;
+      textHeight.value = textRef.value.scrollHeight + 200;
       visitorTop.value = 50 + (textHeight.value - 330) * 0.3;
       // 如果为移动端
       if (window.innerWidth < 768) {

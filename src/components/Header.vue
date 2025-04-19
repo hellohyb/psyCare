@@ -172,8 +172,6 @@ const handleSelectMenu = (item) => {
         if(item.id === 2){
             targetPosition = targetElement.offsetTop - 200
         }
-        
-        
         // 平滑滚动到目标位置
         window.scrollTo({
             top: targetPosition,

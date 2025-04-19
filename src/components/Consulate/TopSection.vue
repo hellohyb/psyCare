@@ -34,7 +34,7 @@ const handleBookConsultation = (type) => {
         })
     }
 }else{
-    window.open('https://my.psycare.world/login', '_blank')
+    window.open('https://copilot.psycare.world/login', '_blank')
 }
 }
 

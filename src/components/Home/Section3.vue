@@ -87,7 +87,7 @@ const visitorList = [
     {
         id: 1,
         title: t('section3_item5_title'),
-        desc: [t('section3_item5_des1'), t('section3_item5_des2')],
+        desc: [t('section3_item5_des1')],
         img: item5,
     },
     {
