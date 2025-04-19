@@ -2,11 +2,15 @@
   <div ref="sectionRef" id="homePage"
    class="top-section mobile md:pc flex justify-center items-center md:items-center w-full h-[900px] md:h-[1000px]">
     <div class="!px-10 w-full flex flex-col justify-center gap-y-4 items-start md:w-[1100px] -translate-y-20">
-      <h1 class="text-5xl font-bold fade-in">{{ t('c_top_title') }}</h1>
-      <div class="text-2xl description fade-in">{{ t('c_top_title_desc') }}</div>
+      <h1 class="hidden md:block text-5xl font-bold fade-in">{{ t('c_top_title') }}</h1>
+      <div class="hidden md:block text-2xl description fade-in">{{ t('c_top_title_desc') }}</div>
+
+      <h1 class="block md:hidden text-3xl font-bold fade-in">{{ t('c_top_title2') }}</h1>
+      <div class="block md:hidden text-xl description fade-in">{{ t('c_top_title_desc2') }}</div>
      <div class="flex">
-        <button @click="handleBookConsultation('home')" class="!px-8 !py-4 text-white font-bold rounded-md bg-teal-600 cursor-pointer hover:bg-teal-800 fade-in">{{ t('c_top_btn1') }}</button>
-        <button @click="handleBookConsultation('influence')" class="!px-8 !py-4 !ml-10 text-white font-bold rounded-md bg-[#47776b] cursor-pointer hover:bg-teal-800 fade-in">{{ t('c_top_btn2') }}</button>
+        <button @click="handleBookConsultation('home')" class="hidden md:!block !px-4 md:!px-8 !py-4 text-white font-bold rounded-md bg-teal-600 cursor-pointer hover:bg-teal-800 fade-in">{{ t('c_top_btn1') }}</button>
+        <button @click="handleBookConsultation('product')" class="block md:!hidden !px-4 md:!px-8 !py-4 text-white font-bold rounded-md bg-teal-600 cursor-pointer hover:bg-teal-800 fade-in">{{ t('c_top_btn1') }}</button>
+        <button @click="handleBookConsultation('influence')" class="!px-4 md:!px-8 !py-4 !ml-10 text-white font-bold rounded-md bg-[#47776b] cursor-pointer hover:bg-teal-800 fade-in">{{ t('c_top_btn2') }}</button>
      </div>
     </div>
   </div>
@@ -20,9 +24,8 @@ const { t } = useI18n()
 const sectionRef = ref(null)
 
 const handleBookConsultation = (type) => {
-
     if(type === 'influence'){
-      // 获取目标元素
+      // 获取目标元素s
       const targetElement = document.querySelector(`#influence`)
     if (targetElement) {
         // 计算目标位置，减去100px的偏移量（可以根据需要调整）

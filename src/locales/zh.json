@@ -164,13 +164,15 @@
     
 
     "c_top_title":"PsyCare 您的人工智能助手",
+    "c_top_title2":"PsyCare守护您的心理健康",
     "c_top_title_desc":"智能相伴，专业随行",
+    "c_top_title_desc2":"我们专注于为诊疗师提供AI智能助手，提升服务效率，助力心理健康管理",
     "c_top_btn1":"个人中心",
     "c_top_btn2":"问卷调查",
 
     "c_section3_title1":"AI 辅助诊断",
     "c_section3_title1_desc1":"让信息整合更高效，诊疗决策更精准",
-    "c_section3_title1_desc1_content":"PsyCare 提供 AI 驱动的聊天助手，可在求助人与 AI 互动过程中自 动提取有价值的信息，并将其结构化保存至患者画像与数据库中， 为后续问诊提供有力支持。",
+    "c_section3_title1_desc1_content":"PsyCare 提供 AI 驱动的聊天助手，可在求助人与 AI 互动过程中自动提取有价值的信息，并将其结构化保存至患者画像与数据库中，为后续问诊提供有力支持。",
 
     "c_section3_title2_desc2":"作为咨询师，您可以：",
     "c_section3_title2_desc2_item1":"快速查看患者的知识图谱与行为情绪轨迹",

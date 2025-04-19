@@ -40,7 +40,7 @@
                  class="absolute -left-10 md:top-100 md:left-2 z-19 w-[100px] h-auto md:w-[130px] object-cover" />
                 <!-- visitort名字气泡-->
                 <div :style="{background: `url(${nameContent}) center center no-repeat`}" 
-                class="w-[200px] h-[50px] absolute left-6 top-130 md:top-130 md:left-20 z-20 object-cover
+                class="w-[200px] h-[50px] absolute left-6 top-120 md:top-130 md:left-20 z-20 object-cover
                         flex items-center justify-center font-bold
                         text-xs
                         "
