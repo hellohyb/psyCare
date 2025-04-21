@@ -136,11 +136,10 @@
   const typeText = async (text, delay = 50) => {
     const currentLength = displayText.value.length;
     const targetLength = text.length;
-    
     // 根据当前文本索引切换表情
-    if (currentTextIndex.value === 1) {
+    if (currentTextIndex.value === 2) {
       currentEmoji.value = smile;
-    } else if (currentTextIndex.value === 2) {
+    } else if (currentTextIndex.value === 3) {
       currentEmoji.value = happy;
     }
     
@@ -157,11 +156,13 @@
   };
   const startTyping = async () => {
       isTyping.value = true;
+      isEnd.value = true;
       while (currentTextIndex.value < texts.length - 1 && isTyping.value) {
         currentTextIndex.value++;
         await typeText(texts.slice(0, currentTextIndex.value + 1).join('\n\n'));
       }
-      isEnd.value = true;
+      
+      currentEmoji.value = happy;
   };
 
   onMounted(() => {
