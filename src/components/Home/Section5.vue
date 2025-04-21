@@ -53,10 +53,6 @@
 
        <!-- Mobile View -->
        <div class="mobile-container md:hidden w-full">
-            <!-- 表情显示区域 -->
-            <div class="emoji-container mb-4 flex justify-center">
-                <img :src="currentEmoji" alt="emoji" class="w-10 h-10 transition-all duration-300" />
-            </div>
             <div class="flex flex-col gap-4">
                 <div 
                     v-for="(item, index) in swiperList" 
@@ -95,11 +91,6 @@
   import deviceBg from '../../assets/Home/section5/device-bg.png';
   import 'swiper/css';
   import 'swiper/css/effect-creative';
-  
-  // 导入表情图片
-  import happy from '../../assets/Home/section4/happy.png';
-  import sad from '../../assets/Home/section4/sad.png';
-  import smile from '../../assets/Home/section4/smile.png';
   
   const { t } = useI18n()
   import swiper1 from '../../assets/Home/section5/swiper1.png';
@@ -151,9 +142,6 @@
   const activeIndex = ref(0);
   const expandedIndex = ref(0);
   
-  // 添加表情状态
-  const currentEmoji = ref(sad);
-  
   // 添加自动轮播相关变量
   const autoRotationTimer = ref(null);
   const autoRotationDelay = 3000; // 自动轮播间隔时间（毫秒）
@@ -169,17 +157,6 @@
     activeIndex.value = swiper.value.activeIndex;
   };
 
-  // 根据expandedIndex更新表情
-  const updateEmoji = (index) => {
-    if (index === 1) {
-      currentEmoji.value = smile;
-    } else if (index === 2) {
-      currentEmoji.value = happy;
-    } else {
-      currentEmoji.value = sad;
-    }
-  };
-
   // 开始自动轮播
   const startAutoRotation = () => {
     if (autoRotationTimer.value) {
@@ -191,9 +168,6 @@
       // 计算下一个要展开的索引，如果当前是最后一个则回到第一个
       const nextIndex = expandedIndex.value >= swiperList.length - 1 ? 0 : expandedIndex.value + 1;
       expandedIndex.value = nextIndex;
-      
-      // 更新表情
-      updateEmoji(nextIndex);
     }, autoRotationDelay);
   };
 
@@ -223,9 +197,6 @@
     // 否则展开点击的项目
     expandedIndex.value = expandedIndex.value === index ? null : index;
     
-    // 更新表情
-    updateEmoji(index);
-    
     // 设置定时器，一段时间后恢复自动轮播
     resumeAutoRotation();
   };
@@ -234,9 +205,6 @@
     if (swiper.value) {
       swiper.value.autoplay.start();
     }
-    
-    // 初始化表情
-    updateEmoji(expandedIndex.value);
     
     // 启动移动端自动轮播
     startAutoRotation();
