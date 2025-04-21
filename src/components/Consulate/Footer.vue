@@ -10,8 +10,8 @@
                 <ul class="flex flex-col gap-y-2">
                     <li>{{ t('footer_product_item1') }}</li>
                     <li>{{ t('footer_product_item2') }}</li>
-                    <li>{{ t('usebook') }}</li>
-                    <li>{{ t('infoSafety') }}</li>
+                    <li>{{ route.path === '/' ? t('usebook') : t('feedback') }}</li>
+                    <li>{{ route.path === '/' ? t('infoSafety') : t('usebook') }}</li>
                 </ul>
             </div>
             <div class="about">
@@ -80,10 +80,12 @@
   import Office from '../icon/footer/Office.vue';
   import { useI18n } from 'vue-i18n';
   import { computed } from 'vue';
+  import { useRoute } from 'vue-router';
+  const route = useRoute()
   const { t,locale } = useI18n()
   const currentLang = computed(() => locale.value)
 
-  // 修改语言切换函数
+// 修改语言切换函数
 const changeLanguage = (lang) => {
     locale.value = lang
     localStorage.setItem('userLanguage', lang)

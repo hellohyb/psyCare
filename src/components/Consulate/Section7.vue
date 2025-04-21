@@ -1,5 +1,5 @@
 <template>
-    <div ref="sectionRef" id="contactUs" class="top-section w-full h-320 !p-10 md:!p-0 !py-40 !mt-20 bg-amber-50 flex flex-col items-center justify-start">
+    <div ref="sectionRef" id="contactUs" class="top-section w-full h-280 md:h-320 !p-10 md:!p-0 !py-30 md:!py-40 !mt-20 bg-amber-50 flex flex-col items-center justify-start">
       <div class="content w-full md:max-w-[1000px] grid grid-cols-1 gap-x-40 md:grid-cols-2 md:translate-y-40">
         <div class="img order-1 md:order-2 fade-in">
             <img :src="section7_right" />

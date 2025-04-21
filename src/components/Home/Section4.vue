@@ -9,9 +9,9 @@
                     backgroundSize: '100% 100%',
                     backgroundPosition: 'center center',
                     height: `${textHeight}px`
-                }" 
+                }"
                  @click="startTyping" 
-                class="w-[330px] md:w-[500px] md:!px-2 relative top-10 left-10 md:top-35 md:left-30 z-18 object-cover
+                class="w-[330px] md:w-[500px] md:!px-2 relative top-2 left-10 md:top-35 md:left-30 z-18 object-cover
                         flex items-center justify-center font-bold
                         text-[#666666]
                         transition-all duration-300
@@ -29,14 +29,14 @@
                      />
                      <img :src="pointer" 
                         @click="startTyping"
-                        alt="pointer" 
+                        alt="pointer"
                           v-if="step < 3"
                         class="absolute left-10 bottom-0 md:bottom-5 md:left-50 z-19 w-[100px] h-auto md:w-[90px] object-cover transition-all duration-300" 
                      />
                 </div>
                 <!-- visitort-->
                 <img :src="visitor" alt="visitor"
-                 class="absolute -left-10 md:top-100 md:left-2 z-19 w-[100px] h-auto md:w-[130px] object-cover" />
+                 class="absolute bottom-50 -left-4 md:bottom-40 md:left-2 z-19 w-[100px] h-auto md:w-[130px] object-cover" />
                 <!-- visitort名字气泡-->
                 <div :style="{background: `url(${nameContent}) center center no-repeat`}" 
                 class="w-[200px] h-[50px] absolute left-6 bottom-45 md:bottom-40 md:left-20 z-20 object-cover
@@ -48,7 +48,7 @@
                 </div>
                 <!-- visitort描述气泡-->
                 <div :style="{background: `url(${descContent}) center center no-repeat`,backgroundSize: '100% 100%', backgroundPosition: 'center center'}" 
-                class="w-[390px] h-[190px] md:w-[500px] md:h-[200px] absolute bottom-0 md:bottom-0 -left-10 md:left-0 z-18 object-cover
+                class="w-[360px] h-[190px] md:w-[500px] md:h-[200px] absolute bottom-0 md:bottom-0 -left-4 md:left-0 z-18 object-cover
                         flex items-center justify-center md:font-bold
                         text-[#666666]
                         "
@@ -83,7 +83,7 @@
                 </div>
                 <!-- consultant描述气泡-->
                 <div :style="{background: `url(${descContent}) center center no-repeat`,backgroundSize: '100% 100%', backgroundPosition: 'center center'}" 
-                class="w-[390px] h-[240px] md:w-[550px] md:h-[200px] absolute top-100 md:top-142 md:-right-20 -right-0 z-18 object-cover
+                class="w-[360px] h-[240px] md:w-[550px] md:h-[200px] absolute top-110 md:top-142 md:-right-20 -right-2 z-18 object-cover
                         flex items-center justify-center md:font-bold
                         text-[#666666]
                         "
