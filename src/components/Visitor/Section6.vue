@@ -35,7 +35,7 @@
         <div class="flex flex-wrap w-full justify-center items-center !mt-2">
             <div class="font-bold text-center">
               <span>{{ t('v_section4_desc2') }}</span>
-              <span class="underline text-[#005843] cursor-pointer"><a href="mailto:support@psycare.ai">{{ t('v_section4_desc3') }}</a></span>
+              <span class="underline text-[#005843] cursor-pointer"><a href="#contactUs">{{ t('v_section4_desc3') }}</a></span>
             </div>
         </div>
        </div>

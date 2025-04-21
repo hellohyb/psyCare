@@ -85,7 +85,7 @@ onMounted(() => {
 }
 @media  screen and (max-width: 767px) {
     .top-section{
-      background: url('../../assets/Consulate/consulate-mobile.png') no-repeat;
+      background: url('../../assets/Consulate/c_mobile_bg.png') no-repeat;
       background-size: 100% 100%;
     }
 }

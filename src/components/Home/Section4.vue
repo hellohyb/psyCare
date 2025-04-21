@@ -36,11 +36,10 @@
                 </div>
                 <!-- visitort-->
                 <img :src="visitor" alt="visitor"
-                :class="`top-[${visitorTop}px]`"
                  class="absolute -left-10 md:top-100 md:left-2 z-19 w-[100px] h-auto md:w-[130px] object-cover" />
                 <!-- visitort名字气泡-->
                 <div :style="{background: `url(${nameContent}) center center no-repeat`}" 
-                class="w-[200px] h-[50px] absolute left-6 top-120 md:top-130 md:left-20 z-20 object-cover
+                class="w-[200px] h-[50px] absolute left-6 bottom-45 md:bottom-40 md:left-20 z-20 object-cover
                         flex items-center justify-center font-bold
                         text-xs
                         "
@@ -49,11 +48,10 @@
                 </div>
                 <!-- visitort描述气泡-->
                 <div :style="{background: `url(${descContent}) center center no-repeat`,backgroundSize: '100% 100%', backgroundPosition: 'center center'}" 
-                class="w-[390px] h-[190px] md:w-[500px] md:h-[200px] absolute top-140 md:top-140 -left-10 md:left-0 z-18 object-cover
+                class="w-[390px] h-[190px] md:w-[500px] md:h-[200px] absolute bottom-0 md:bottom-0 -left-10 md:left-0 z-18 object-cover
                         flex items-center justify-center md:font-bold
                         text-[#666666]
                         "
-                 
                 >
                      <div class="!px-10 text-xs leading-6">
                         {{ t('visitor_desc') }}
@@ -129,7 +127,7 @@
   const textHeight = ref(270);
   const visitorTop = ref(50);
   const visitorNameTop = ref(160);
-  const visitorDescTop = ref(550);
+  const visitorDescTop = ref(100);
   // 添加表情状态
   const currentEmoji = ref(sad);
 
@@ -152,7 +150,7 @@
       // 更新气泡高度，添加额外空间以适应内容
       textHeight.value = textRef.value.scrollHeight + 200; // 增加一些额外空间用于padding
       visitorTop.value = 50 + (textHeight.value - 330) * 0.3;
-      visitorDescTop.value = 550 + (textHeight.value - 330) * 0.3;
+      visitorDescTop.value = 100 + (textHeight.value - 330) * 0.3;
     }
     isTyping.value = false;
     step.value++;
@@ -183,12 +181,13 @@
     if (textRef.value) {
       textHeight.value = textRef.value.scrollHeight + 200;
       visitorTop.value = 50 + (textHeight.value - 330) * 0.3;
+      visitorDescTop.value = 550 + (textHeight.value - 330) * 0.3;
       // 如果为移动端
-      if (window.innerWidth < 768) {
-        visitorDescTop.value = 330;
-      } else {
-        visitorDescTop.value = 550;
-      }
+      // if (window.innerWidth < 768) {
+      //   visitorDescTop.value = 330;
+      // } else {
+      //   visitorDescTop.value = 550;
+      // }
     }
 
     // 添加淡入动画观察器

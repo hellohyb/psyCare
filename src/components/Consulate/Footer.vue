@@ -10,8 +10,8 @@
                 <ul class="flex flex-col gap-y-2">
                     <li>{{ t('footer_product_item1') }}</li>
                     <li>{{ t('footer_product_item2') }}</li>
-                    <li>{{ t('footer_product_item3') }}</li>
-                    <li>{{ t('footer_product_item4') }}</li>
+                    <li>{{ t('usebook') }}</li>
+                    <li>{{ t('infoSafety') }}</li>
                 </ul>
             </div>
             <div class="about">

@@ -2,6 +2,9 @@
     "home": "首页",
     "service": "服务",
     "product": "产品",
+    "usebook": "使用手册",
+    "infoSafety": "信息安全",
+    "feedback": "用户反馈",
     "influence": "影响",
     "contactUs": "联系我们",
     "visitor": "来访者",
@@ -144,8 +147,8 @@
     "v_section4_title2":"🔐 信息安全，我们认真对待",
     "v_section4_title3":"🚫 您的隐私，我们从不妥协",
     "v_section4_desc":"我们坚信，技术不应冷漠，它应该是关怀的延伸。PsyCare 所做的一切，是为了让您在安心、安全的环境中，慢慢走出阴霾，迎向光亮。",
-    "v_section4_desc2":"如您有任何疑问或顾虑，请联系我们： 📧 ",
-    "v_section4_desc3":"support{'@'}Psycare.Ai",
+    "v_section4_desc2":"如您有任何疑问或顾虑，",
+    "v_section4_desc3":"请联系我们",
 
 
 

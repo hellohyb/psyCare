@@ -1,5 +1,5 @@
 <template>
-    <div ref="sectionRef" id="product" class="top-section !px-4 w-full md:max-w-[1100px]">
+    <div ref="sectionRef" id="service" class="top-section !px-4 w-full md:max-w-[1100px]">
         <div class="title flex fade-in">
             <h1 class="text-2xl font-bold">{{ t('btn1_text') }}</h1>
             <img :src="right" alt="right">

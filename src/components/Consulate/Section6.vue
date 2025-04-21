@@ -1,5 +1,5 @@
 <template>
-    <div ref="sectionRef" class="top-section !p-4 md:!p-10 !my-10 md:!my-20 bg-white flex flex-col items-center justify-start  w-full md:w-[1100px]">
+    <div ref="sectionRef" id="influence" class="top-section !p-4 md:!p-10 !my-10 md:!my-20 bg-white flex flex-col items-center justify-start  w-full md:w-[1100px]">
        <h1 class="text-2xl font-bold !mb-4 fade-in">{{ t('c_section6_title') }}</h1>
        <h3 class="font-bold text-sm text-center !my-1 fade-in">{{ t('c_section6_title_desc1') }}</h3>
         <div class="section6-item rounded-lg w-full md:w-[70%] bg-[#f7f8f2] md:-translate-x-20 !py-8 !px-4 !mt-10 flex justify-between items-center fade-in">
@@ -31,7 +31,7 @@
         <div class="flex flex-wrap w-full justify-center items-center !mt-2">
             <div class="font-bold text-center">
               <span>{{ t('v_section4_desc2') }}</span>
-              <span class="underline text-[#005843] cursor-pointer"><a href="mailto:support@psycare.ai">{{ t('v_section4_desc3') }}</a></span>
+              <span class="underline text-[#005843] cursor-pointer"><a href="#contactUs">{{ t('v_section4_desc3') }}</a></span>
             </div>
         </div>
        </div>

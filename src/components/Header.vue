@@ -144,12 +144,12 @@ const navList = computed(() => [
     },
     {
         id: 3,
-        name: t('product'),
+        name: route.path === '/' ?  t('product') : route.path === '/visitor' ? t('usebook') : t('feedback'),
         desc: 'product'
     },
     {
         id: 4,
-        name: t('influence'),
+        name: route.path === '/' ? t('influence') : t('infoSafety'),
         desc: 'influence'
     },
     {

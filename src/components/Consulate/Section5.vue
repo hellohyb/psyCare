@@ -1,5 +1,5 @@
 <template>
-    <div  ref="sectionRef" id="influence" class="top-section flex justify-center items-center !p-4 w-full">
+    <div  ref="sectionRef"  class="top-section flex justify-center items-center !p-4 w-full">
         <div class="section2 flex flex-col bg-white items-center rounded-lg md:!p-20 justify-start w-full md:max-w-[1100px]">
             <h1 class="text-2xl font-bold !mb-6 fade-in">{{ t('c_section5_title') }}</h1>
             <h3 class="text-sm md:text-md md:font-bold text-center fade-in">{{ t('c_section5_title_desc1') }}</h3>

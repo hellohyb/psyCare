@@ -1,5 +1,5 @@
 <template>
-    <div ref="sectionRef" id="product" class="top-section flex flex-col gap-y-20 justify-center items-center !px-4 w-full">
+    <div ref="sectionRef" class="top-section flex flex-col gap-y-20 justify-center items-center !px-4 w-full">
         <div class="section3 grid grid-cols-1 md:grid-cols-2 gap-4 w-full md:max-w-[1100px]">
             <img class="order-2 md:order-1" src="../../assets/Consulate/section31.png" alt="">
             <div class="flex flex-col justify-between items-start !p-10 order-1 md:order-2">

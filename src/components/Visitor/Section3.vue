@@ -1,6 +1,6 @@
 <template>
     <div ref="sectionRef" id="product" class="top-section flex justify-center items-center !px-4 w-full relative">
-        <video :src="videoUrl" autoplay muted loop class="absolute top-0 left-0 -z-1 w-full h-full object-cover"></video>
+        <video :src="videoUrl" autoplay loop playsinline muted class="absolute top-0 left-0 -z-2 w-full h-full object-cover"></video>
         <div class="section3 text-white flex flex-col items-start justify-center !py-20 shadow-lg w-full h-180 md:max-w-[1100px]">
             <h1 class="text-2xl font-bold !mb-4 fade-in">{{ t('v_section3_title') }}</h1>
             <div class="flex justify-start items-center !my-2 fade-in">

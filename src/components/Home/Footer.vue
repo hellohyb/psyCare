@@ -10,8 +10,8 @@
                 <ul class="flex flex-col gap-y-2">
                     <li>{{ t('footer_product_item1') }}</li>
                     <li>{{ t('footer_product_item2') }}</li>
-                    <li>{{ t('footer_product_item3') }}</li>
-                    <li>{{ t('footer_product_item4') }}</li>
+                    <li>{{ route.path === '/' ? t('footer_product_item3') : route.path === '/visitor' ? t('usebook') : t('feedback') }}</li>
+                    <li>{{ route.path === '/' ? t('footer_product_item4') : t('infoSafety') }}</li>
                 </ul>
             </div>
             <div class="about">
@@ -81,6 +81,8 @@
   import Office from '../icon/footer/Office.vue';
   import { useI18n } from 'vue-i18n';
   import { computed } from 'vue';
+  import { useRoute } from 'vue-router';
+  const route = useRoute()
   const { t,locale } = useI18n()
   const currentLang = computed(() => locale.value)
 
