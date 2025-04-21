@@ -3,7 +3,7 @@
    class="top-section mobile md:pc flex justify-center items-center w-full h-[900px] md:h-[1100px]">
     <div class="!px-10 w-full flex flex-col justify-center items-center md:w-[1100px] -translate-y-20">
       <h1 class="text-4xl font-bold fade-in">{{ t('section1') }}</h1>
-      <div class="description fade-in">{{ t('section2') }}</div>
+      <div class="description fade-in">{{ t('homepage_desc') }}</div>
       <button @click="handleBookConsultation" class="!px-6 !py-4 text-white rounded-md bg-teal-600 cursor-pointer hover:bg-teal-800 fade-in">{{ t('btn1_text') }}</button>
     </div>
   </div>
