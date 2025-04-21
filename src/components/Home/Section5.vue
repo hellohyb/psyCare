@@ -85,7 +85,7 @@
   
   <script setup>
   import { useI18n } from 'vue-i18n';
-  import { ref, onMounted } from 'vue';
+  import { ref, onMounted, onBeforeUnmount } from 'vue';
   import { Swiper, SwiperSlide } from 'swiper/vue';
   import { Autoplay as SwiperAutoplay, EffectCreative as SwiperEffectCreative } from 'swiper/modules';
   import deviceBg from '../../assets/Home/section5/device-bg.png';
@@ -141,6 +141,13 @@
   const swiper = ref(null);
   const activeIndex = ref(0);
   const expandedIndex = ref(0);
+  
+  // 添加自动轮播相关变量
+  const autoRotationTimer = ref(null);
+  const autoRotationDelay = 3000; // 自动轮播间隔时间（毫秒）
+  const autoRotationResumeDelay = 5000; // 用户交互后恢复自动轮播的延迟时间（毫秒）
+  const resumeTimer = ref(null);
+  const isAutoRotating = ref(true);
 
   const onSwiper = (swiperInstance) => {
     swiper.value = swiperInstance;
@@ -150,13 +157,66 @@
     activeIndex.value = swiper.value.activeIndex;
   };
 
+  // 开始自动轮播
+  const startAutoRotation = () => {
+    if (autoRotationTimer.value) {
+      clearInterval(autoRotationTimer.value);
+    }
+    
+    isAutoRotating.value = true;
+    autoRotationTimer.value = setInterval(() => {
+      // 计算下一个要展开的索引，如果当前是最后一个则回到第一个
+      const nextIndex = expandedIndex.value >= swiperList.length - 1 ? 0 : expandedIndex.value + 1;
+      expandedIndex.value = nextIndex;
+    }, autoRotationDelay);
+  };
+
+  // 停止自动轮播
+  const stopAutoRotation = () => {
+    isAutoRotating.value = false;
+    if (autoRotationTimer.value) {
+      clearInterval(autoRotationTimer.value);
+      autoRotationTimer.value = null;
+    }
+  };
+
+  // 用户交互后恢复自动轮播
+  const resumeAutoRotation = () => {
+    if (resumeTimer.value) {
+      clearTimeout(resumeTimer.value);
+    }
+    
+    resumeTimer.value = setTimeout(() => {
+      startAutoRotation();
+    }, autoRotationResumeDelay);
+  };
+
   const toggleExpand = (index) => {
+    // 停止自动轮播
+    stopAutoRotation();
+    // 否则展开点击的项目
     expandedIndex.value = expandedIndex.value === index ? null : index;
+    
+    // 设置定时器，一段时间后恢复自动轮播
+    resumeAutoRotation();
   };
 
   onMounted(() => {
     if (swiper.value) {
       swiper.value.autoplay.start();
+    }
+    
+    // 启动移动端自动轮播
+    startAutoRotation();
+  });
+  
+  // 组件卸载前清除定时器
+  onBeforeUnmount(() => {
+    if (autoRotationTimer.value) {
+      clearInterval(autoRotationTimer.value);
+    }
+    if (resumeTimer.value) {
+      clearTimeout(resumeTimer.value);
     }
   });
   </script>

@@ -23,14 +23,14 @@
                         {{ displayText }}
                      </div>
                      <!-- visitort提问表情 -->
-                     <img :src="currentEmoji" 
+                     <img :src="currentEmoji"
                         alt="emotion" 
                         class="absolute bottom-8 right-30 md:right-30 md:bottom-10 z-19 object-cover transition-all duration-300" 
                      />
                      <img :src="pointer" 
                         @click="startTyping"
                         alt="pointer"
-                          v-if="step < 3"
+                        v-if="!isEnd"
                         class="absolute left-10 bottom-0 md:bottom-5 md:left-50 z-19 w-[100px] h-auto md:w-[90px] object-cover transition-all duration-300" 
                      />
                 </div>
@@ -123,11 +123,13 @@
   const texts = [
     t('visitor_ask1'),
     t('visitor_ask2'),
+    t('visitor_ask3')
   ];
   const textHeight = ref(270);
   const visitorTop = ref(50);
   const visitorNameTop = ref(160);
   const visitorDescTop = ref(100);
+  const isEnd = ref(false);
   // 添加表情状态
   const currentEmoji = ref(sad);
 
@@ -152,28 +154,14 @@
       visitorTop.value = 50 + (textHeight.value - 330) * 0.3;
       visitorDescTop.value = 100 + (textHeight.value - 330) * 0.3;
     }
-    isTyping.value = false;
-    step.value++;
   };
-  const step = ref(1)
   const startTyping = async () => {
-    console.log(step.value)
-    if (step.value == 2){
-      texts.push(t('visitor_ask3'))
       isTyping.value = true;
       while (currentTextIndex.value < texts.length - 1 && isTyping.value) {
         currentTextIndex.value++;
         await typeText(texts.slice(0, currentTextIndex.value + 1).join('\n\n'));
       }
-    }else if(step.value == 1){
-      isTyping.value = true;
-      while (currentTextIndex.value < texts.length - 1 && isTyping.value) {
-        currentTextIndex.value++;
-        await typeText(texts.slice(0, currentTextIndex.value + 1).join('\n\n'));
-      }
-    }else{
-      return;
-    }
+      isEnd.value = true;
   };
 
   onMounted(() => {
